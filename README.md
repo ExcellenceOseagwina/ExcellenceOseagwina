@@ -19,13 +19,8 @@
 * Cybersecurity
 * Ethical Hacking
 * Penetration Testing
-* Security Research
 * Software Development
-* Machine Learning Applications in Security
 
-🎯 Career Goal:
-
-To become a skilled Cybersecurity Professional and Security Researcher dedicated to building secure, reliable, and innovative digital solutions.
 
 ---
 
@@ -52,19 +47,13 @@ To become a skilled Cybersecurity Professional and Security Researcher dedicated
 ## 🔐 Cybersecurity Interests
 
 * Penetration Testing
-* Web Application Security
 * Network Security
 * Threat Hunting
 * Digital Forensics
 * Malware Analysis
-* Threat Intelligence
-* Security Automation
-* Secure Software Development
-* Machine Learning for Cybersecurity
-
 ---
 
-## 📂 Featured Projects
+## 📂 Projects
 
 
 ### 📦 University Inventory Control Management System
@@ -114,10 +103,8 @@ A web-based inventory management platform developed to improve asset tracking, m
 
 * 🎯 Passionate about Cybersecurity
 * 📚 Lifelong Learner
-* 🎌 Anime & Manga Enthusiast
+* 🎌 Anime, Comic, Movie and Manga Enthusiast
 * 💡 Technology Explorer
 * 🔍 Always Curious About How Things Work
 
 ---
-
-> "Security is not a product, but a process." — Bruce Schneier
