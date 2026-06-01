@@ -24,15 +24,6 @@
 * Software Development
 * Machine Learning Applications in Security
 
-🌱 Currently Learning:
-
-* Advanced Web Security
-* Python for Security Automation
-* Network Security
-* Digital Forensics
-* Malware Analysis
-* Machine Learning
-
 🎯 Career Goal:
 
 To become a skilled Cybersecurity Professional and Security Researcher dedicated to building secure, reliable, and innovative digital solutions.
