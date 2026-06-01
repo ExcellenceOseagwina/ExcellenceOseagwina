@@ -1,10 +1,9 @@
-# Hi there 👋, I'm Excellence Oseagwina
 
 <div align="center">
 
-### 🔐 Cybersecurity Student | Security Researcher | Developer
+  ### Hi there 👋, I'm Excellence Oseagwina
 
-*"Learning, Building, Securing."*
+### 🔐 Cybersecurity Student | Researcher | Developer
 
 
 </div>
