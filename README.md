@@ -1,4 +1,4 @@
-# Hi there 👋, I'm Levi
+# Hi there 👋, I'm Excellence Oseagwina
 
 ## 🚀 About Me
 🎓 Cybersecurity Student
