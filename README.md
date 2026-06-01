@@ -67,17 +67,11 @@ To become a skilled Cybersecurity Professional and Security Researcher dedicated
 
 ## 📂 Featured Projects
 
-### 🛡️ Automated Phishing Detection System
-
-A machine-learning-based phishing detection system designed to identify malicious URLs and websites using intelligent classification techniques.
 
 ### 📦 University Inventory Control Management System
 
 A web-based inventory management platform developed to improve asset tracking, monitoring, reporting, and resource management within a university environment.
 
-### 🔍 Security Research Projects
-
-Hands-on security projects focused on vulnerability assessment, secure coding practices, penetration testing methodologies, and defensive security strategies.
 
 ---
 
