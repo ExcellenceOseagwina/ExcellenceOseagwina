@@ -10,25 +10,25 @@
 
 <div align="center">
 
-<p>
+  ## Connect With Me
+  
   <a href="https://github.com/ExcellenceOseagwina">
-    <img alt="GitHub" align="center" src="https://img.shields.io/badge/-GitHub-0D1117?style=flat&logo=github&logoColor=00FF9C" />
+    <img alt="GitHub" align="center" src="https://img.shields.io/badge/-GitHub-181717?style=flat&logo=github&logoColor=white" />
   </a>
-  <a href="https://www.linkedin.com/in/oseagwina-excellence-oseobulu-046204306/">
-    <img alt="LinkedIn" align="center" src="https://img.shields.io/badge/-LinkedIn-0D1117?style=flat&logo=linkedin&logoColor=38BDF8" />
-  </a>
-  <a href="https://x.com/excellence_ose">
-    <img alt="X" align="center" src="https://img.shields.io/badge/-X-0D1117?style=flat&logo=x&logoColor=white" />
-  </a>
-  <a href="mailto:oseagwinaexcellencegrace@gmail.com">
-    <img alt="Gmail" align="center" src="https://img.shields.io/badge/-Gmail-0D1117?style=flat&logo=gmail&logoColor=EA4335" />
-  </a>
-</p>
 
+  <a href="https://www.linkedin.com/in/oseagwina-excellence-oseobulu-046204306/">
+    <img alt="LinkedIn" align="center" src="https://img.shields.io/badge/-LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white" />
+  </a>
+
+  <a href="mailto:oseagwinaexcellencegrace@gmail.com">
+    <img alt="Gmail" align="center" src="https://img.shields.io/badge/-Gmail-EA4335?style=flat&logo=gmail&logoColor=white" />
+  </a>
+
+  <a href="https://x.com/excellence_ose">
+    <img alt="X" align="center" src="https://img.shields.io/badge/-X (formally, Twitter)-000000?style=flat&logo=x&logoColor=white" />
+  </a>
 
 </div>
-
----
 
 <div align="center">
 
@@ -63,46 +63,43 @@ and solving technical problems with clean, practical solutions.
 ### 🧰 Tech Stack
 
 <p>
-  <img alt="HTML5" align="center" src="https://img.shields.io/badge/-HTML5-E34F26?style=flat&logo=html5&logoColor=white" />
-  <img alt="CSS3" align="center" src="https://img.shields.io/badge/-CSS3-1572B6?style=flat&logo=css&logoColor=white" />
-  <img alt="JavaScript" align="center" src="https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black" />
-  <img alt="Jupyter" align="center" src="https://img.shields.io/badge/-Jupyter-F37626?style=flat&logo=jupyter&logoColor=white" />
-  <img alt="Python" align="center" src="https://img.shields.io/badge/-Python-3776AB?style=flat&logo=python&logoColor=white" />
-  <img alt="SCSS" align="center" src="https://img.shields.io/badge/-SCSS-CC6699?style=flat&logo=sass&logoColor=white" />
-  <img alt="PostgreSQL" align="center" src="https://img.shields.io/badge/-PostgreSQL-4169E1?style=flat&logo=postgresql&logoColor=white" />
-  <img alt="Bash" align="center" src="https://img.shields.io/badge/-Bash-121011?style=flat&logo=gnubash&logoColor=white" />
+  <img alt="HTML5" align="center" src="https://img.shields.io/badge/-HTML5-000000?style=flat&logo=html5&logoColor=E34F26" />
+  <img alt="CSS3" align="center" src="https://img.shields.io/badge/-CSS3-000000?style=flat&logo=css3&logoColor=1572B6" />
+  <img alt="JavaScript" align="center" src="https://img.shields.io/badge/-JavaScript-000000?style=flat&logo=javascript&logoColor=F7DF1E" />
+  <img alt="Jupyter" align="center" src="https://img.shields.io/badge/-Jupyter-000000?style=flat&logo=jupyter&logoColor=F37626" />
+  <img alt="Python" align="center" src="https://img.shields.io/badge/-Python-000000?style=flat&logo=python&logoColor=3776AB" />
+  <img alt="SCSS" align="center" src="https://img.shields.io/badge/-SCSS-000000?style=flat&logo=sass&logoColor=CC6699" />
+  <img alt="PostgreSQL" align="center" src="https://img.shields.io/badge/-PostgreSQL-000000?style=flat&logo=postgresql&logoColor=4169E1" />
+  <img alt="Bash" align="center" src="https://img.shields.io/badge/-Bash-000000?style=flat&logo=gnubash&logoColor=FFFFFF" />
 </p>
 
 ### 🛠 Tools
 
 <p>
-  <img alt="Visual Studio Code" align="center" src="https://img.shields.io/badge/-Visual%20Studio%20Code-007ACC?style=flat&logo=visual-studio-code&logoColor=white" />
-  <img alt="Git" align="center" src="https://img.shields.io/badge/-Git-F05032?style=flat&logo=git&logoColor=white" />
-  <img alt="Node.js" align="center" src="https://img.shields.io/badge/-Node.js-339933?style=flat&logo=node.js&logoColor=white" />
-  <img alt="Express.js" align="center" src="https://img.shields.io/badge/-Express.js-0D1117?style=flat&logo=express&logoColor=FFFFFF" />
-  <img alt="Supabase" align="center" src="https://img.shields.io/badge/-Supabase-3ECF8E?style=flat&logo=supabase&logoColor=white" />
+  <img alt="Visual Studio Code" align="center" src="https://img.shields.io/badge/-Visual%20Studio%20Code-000000?style=flat&logo=visual-studio-code&logoColor=007ACC" />
+  <img alt="Git" align="center" src="https://img.shields.io/badge/-Git-000000?style=flat&logo=git&logoColor=F05032" />
+  <img alt="Node.js" align="center" src="https://img.shields.io/badge/-Node.js-000000?style=flat&logo=node.js&logoColor=339933" />
+  <img alt="Express.js" align="center" src="https://img.shields.io/badge/-Express.js-000000?style=flat&logo=express&logoColor=FFFFFF" />
+  <img alt="Multer" align="center" src="https://img.shields.io/badge/-Multer-000000?style=flat&logo=npm&logoColor=CB3837" />
+  <img alt="Supabase" align="center" src="https://img.shields.io/badge/-Supabase-000000?style=flat&logo=supabase&logoColor=3ECF8E" />
 </p>
 
 ### 💻 Platforms
 
 <p>
-  <img alt="Windows" align="center" src="https://img.shields.io/badge/-Windows-0078D6?style=flat&logo=windows&logoColor=white" />
-  <img alt="Kali Linux" align="center" src="https://img.shields.io/badge/-Kali%20Linux-557C94?style=flat&logo=kalilinux&logoColor=white" />
-  <img alt="Linux" align="center" src="https://img.shields.io/badge/-Linux-00ADD8?style=flat&logo=linux&logoColor=white" />
+  <img alt="Windows" align="center" src="https://img.shields.io/badge/-Windows-000000?style=flat&logo=microsoft&logoColor=0078D6" />
+  <img alt="Kali Linux" align="center" src="https://img.shields.io/badge/-Kali%20Linux-000000?style=flat&logo=kalilinux&logoColor=558C94" />
+  <img alt="Linux" align="center" src="https://img.shields.io/badge/-Linux-000000?style=flat&logo=linux&logoColor=FCC624" />
 </p>
 </div>
-
----
 
 <div align="center">
 
 ## Currently Learning
 
-![C](https://img.shields.io/badge/C-000000?style=for-the-badge&logo=c&logoColor=A8B9CC)
+<img alt="C" align="center" src="https://img.shields.io/badge/-C-000000?style=flat&logo=c&logoColor=A8B9CC" />
 
 </div>
-
----
 
 <div align="center">
 
@@ -112,65 +109,51 @@ and solving technical problems with clean, practical solutions.
 
 An inventory management project for university resources, built with a modern web stack and backend support.
 
-![HTML5](https://img.shields.io/badge/HTML-111827?style=flat-square&logo=html5&logoColor=E34F26)
-![CSS3](https://img.shields.io/badge/CSS-111827?style=flat-square&logo=css3&logoColor=1572B6)
-![JavaScript](https://img.shields.io/badge/JavaScript-111827?style=flat-square&logo=javascript&logoColor=F7DF1E)
-![Supabase](https://img.shields.io/badge/Supabase-111827?style=flat-square&logo=supabase&logoColor=3FCF8E)
-![Node.js](https://img.shields.io/badge/Node.js-111827?style=flat-square&logo=nodedotjs&logoColor=5FA04E)
-![Express.js](https://img.shields.io/badge/Express.js-111827?style=flat-square&logo=express&logoColor=white)
+<p>
+  <img alt="HTML5" align="center" src="https://img.shields.io/badge/-HTML5-000000?style=flat&logo=html5&logoColor=red" />
+  <img alt="CSS3" align="center" src="https://img.shields.io/badge/-CSS3-000000?style=flat&logo=css&logoColor=blue" />
+  <img alt="JavaScript" align="center" src="https://img.shields.io/badge/-JavaScript-000000?style=flat&logo=javascript&logoColor=yellow" />
+  <img alt="Node.js" align="center" src="https://img.shields.io/badge/-Node.js-000000?style=flat&logo=node.js&logoColor=green" />
+  <img alt="Express.js" align="center" src="https://img.shields.io/badge/-Express.js-000000?style=flat&logo=express&logoColor=white" />
+  <img alt="Supabase" align="center" src="https://img.shields.io/badge/-Supabase-000000?style=flat&logo=supabase&logoColor=lightgreen" />
+  <img alt="Multer" align="center" src="https://img.shields.io/badge/-Multer-000000?style=flat&logo=npm&logoColor=orange" />
+</p>
 
 ### WellBot
 
 Student support chatbot - Wellspring University Student Assistant with auth
 
-![HTML5](https://img.shields.io/badge/HTML-111827?style=flat-square&logo=html5&logoColor=E34F26)
-![CSS3](https://img.shields.io/badge/CSS-111827?style=flat-square&logo=css3&logoColor=1572B6)
-![JavaScript](https://img.shields.io/badge/JavaScript-111827?style=flat-square&logo=javascript&logoColor=F7DF1E)
-![Supabase](https://img.shields.io/badge/Supabase-111827?style=flat-square&logo=supabase&logoColor=3FCF8E)
-![Node.js](https://img.shields.io/badge/Node.js-111827?style=flat-square&logo=nodedotjs&logoColor=5FA04E)
-![Express.js](https://img.shields.io/badge/Express.js-111827?style=flat-square&logo=express&logoColor=white)
+<p>
+  <img alt="HTML5" align="center" src="https://img.shields.io/badge/-HTML5-000000?style=flat&logo=html5&logoColor=red" />
+  <img alt="CSS3" align="center" src="https://img.shields.io/badge/-CSS3-000000?style=flat&logo=css&logoColor=blue" />
+  <img alt="JavaScript" align="center" src="https://img.shields.io/badge/-JavaScript-000000?style=flat&logo=javascript&logoColor=yellow" />
+  <img alt="Node.js" align="center" src="https://img.shields.io/badge/-Node.js-000000?style=flat&logo=node.js&logoColor=green" />
+  <img alt="Express.js" align="center" src="https://img.shields.io/badge/-Express.js-000000?style=flat&logo=express&logoColor=white" />
+  <img alt="Supabase" align="center" src="https://img.shields.io/badge/-Supabase-000000?style=flat&logo=supabase&logoColor=lightgreen" />
+</p>
 
 </div>
-
----
 
 <div align="center">
 
 ## GitHub Statistics
 
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=ExcellenceOseagwina&theme=github_dark" width="50.5%" /> 
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=ExcellenceOseagwina&theme=github_dark" width="60.5%" /> 
 <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=ExcellenceOseagwina&theme=github_dark" width="30.5%" />
 <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=ExcellenceOseagwina&theme=dark" width="30.5%" />
 <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=ExcellenceOseagwina&theme=dark" width="30.5%" />
 
 </div>
 
----
+<h2 align="center">Fun Facts</h2>
 
-<div align="center">
-
-## Connect With Me
-
-[![GitHub](https://img.shields.io/badge/GitHub-ExcellenceOseagwina-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ExcellenceOseagwina)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/oseagwina-excellence-oseobulu-046204306/)
-[![Gmail](https://img.shields.io/badge/Gmail-Send%20Mail-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:oseagwinaexcellencegrace@gmail.com)
-[![X](https://img.shields.io/badge/X-Follow%20Me-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/excellence_ose)
-
-</div>
-
----
-
-<div align="center">
-
-## Fun Facts
-
-</div>
+<div align="left">
 
 - I love watching **anime** and **movies**
 - I enjoy reading **comics**, **novels**, and **manga**
 - I like exploring how things work, how they fail, and how to make them better
 
----
+</div>
 
 <div align="center">
 
