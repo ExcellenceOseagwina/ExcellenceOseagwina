@@ -10,10 +10,21 @@
 
 <div align="center">
 
-[![GitHub](https://img.shields.io/badge/GitHub-ExcellenceOseagwina-000000?style=for-the-badge&logo=github&logoColor=00FF9C&labelColor=000000)](https://github.com/ExcellenceOseagwina)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-000000?style=for-the-badge&logo=linkedin&logoColor=38BDF8&labelColor=000000)](https://www.linkedin.com/in/oseagwina-excellence-oseobulu-046204306/)
-[![X](https://img.shields.io/badge/X-excellence__ose-000000?style=for-the-badge&logo=x&logoColor=white&labelColor=000000)](https://x.com/excellence_ose)
-[![Gmail](https://img.shields.io/badge/Gmail-Email%20Me-000000?style=for-the-badge&logo=gmail&logoColor=EA4335&labelColor=000000)](mailto:oseagwinaexcellencegrace@gmail.com)
+<p>
+  <a href="https://github.com/ExcellenceOseagwina">
+    <img alt="GitHub" align="center" src="https://img.shields.io/badge/-GitHub-0D1117?style=flat&logo=github&logoColor=00FF9C" />
+  </a>
+  <a href="https://www.linkedin.com/in/oseagwina-excellence-oseobulu-046204306/">
+    <img alt="LinkedIn" align="center" src="https://img.shields.io/badge/-LinkedIn-0D1117?style=flat&logo=linkedin&logoColor=38BDF8" />
+  </a>
+  <a href="https://x.com/excellence_ose">
+    <img alt="X" align="center" src="https://img.shields.io/badge/-X-0D1117?style=flat&logo=x&logoColor=white" />
+  </a>
+  <a href="mailto:oseagwinaexcellencegrace@gmail.com">
+    <img alt="Gmail" align="center" src="https://img.shields.io/badge/-Gmail-0D1117?style=flat&logo=gmail&logoColor=EA4335" />
+  </a>
+</p>
+
 
 </div>
 
@@ -37,34 +48,57 @@ and solving technical problems with clean, practical solutions.
 
 ## `./security-focus.sh`
 
-![Reconnaissance](https://img.shields.io/badge/Reconnaissance-000000?style=for-the-badge&logo=hackthebox&logoColor=00FF9C)
-![Web Security](https://img.shields.io/badge/Web%20Security-000000?style=for-the-badge&logo=owasp&logoColor=00FF9C)
-![Ethical Pentesting](https://img.shields.io/badge/Ethical%20Pentesting-000000?style=for-the-badge&logo=kalilinux&logoColor=38BDF8)
-![Problem Solving](https://img.shields.io/badge/Problem%20Solving-000000?style=for-the-badge&logo=codeforces&logoColor=F97316)
-
+<p>
+  <img alt="Reconnaissance" align="center" src="https://img.shields.io/badge/-Reconnaissance-000000?style=flat&logo=hackthebox&logoColor=00FF9C" />
+  <img alt="Web Security" align="center" src="https://img.shields.io/badge/-Web%20Security-000000?style=flat&logo=owasp&logoColor=00FF9C" />
+  <img alt="Ethical Pentesting" align="center" src="https://img.shields.io/badge/-Ethical%20Pentesting-000000?style=flat&logo=kalilinux&logoColor=38BDF8" />
+  <img alt="Problem Solving" align="center" src="https://img.shields.io/badge/-Problem%20Solving-000000?style=flat&logo=codeforces&logoColor=F97316" />
+</p>
 </div>
 
 ---
 
 <div align="center">
 
-## Tech Stack
+### 🧰 Tech Stack
 
-![HTML5](https://img.shields.io/badge/HTML5-000000?style=for-the-badge&logo=html5&logoColor=E34F26)
-![CSS3](https://img.shields.io/badge/CSS3-000000?style=for-the-badge&logo=css3&logoColor=1572B6)
-![JavaScript](https://img.shields.io/badge/JavaScript-000000?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
-![Python](https://img.shields.io/badge/Python-000000?style=for-the-badge&logo=python&logoColor=3776AB)
-![SCSS](https://img.shields.io/badge/SCSS-000000?style=for-the-badge&logo=sass&logoColor=CC6699)
-![Node.js](https://img.shields.io/badge/Node.js-000000?style=for-the-badge&logo=nodedotjs&logoColor=5FA04E)
-![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
-![Supabase](https://img.shields.io/badge/Supabase-000000?style=for-the-badge&logo=supabase&logoColor=3FCF8E)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-000000?style=for-the-badge&logo=postgresql&logoColor=4169E1)
-![VS Code](https://img.shields.io/badge/VS%20Code-000000?style=for-the-badge&logo=visualstudiocode&logoColor=007ACC)
-![Kali Linux](https://img.shields.io/badge/Kali%20Linux-000000?style=for-the-badge&logo=kalilinux&logoColor=557C94)
-![Bash](https://img.shields.io/badge/Bash-000000?style=for-the-badge&logo=gnubash&logoColor=4EAA25)
-![Git](https://img.shields.io/badge/Git-000000?style=for-the-badge&logo=git&logoColor=F05032)
-![Linux](https://img.shields.io/badge/Linux-000000?style=for-the-badge&logo=linux&logoColor=FCC624)
-![Multer](https://img.shields.io/badge/Multer-000000?style=for-the-badge&logo=npm&logoColor=CB3837)
+<p>
+  <img alt="HTML5" align="center" src="https://img.shields.io/badge/-HTML5-E34F26?style=flat&logo=html5&logoColor=white" />
+  <img alt="CSS3" align="center" src="https://img.shields.io/badge/-CSS3-1572B6?style=flat&logo=css&logoColor=white" />
+  <img alt="JavaScript" align="center" src="https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black" />
+  <img alt="Jupyter" align="center" src="https://img.shields.io/badge/-Jupyter-F37626?style=flat&logo=jupyter&logoColor=white" />
+  <img alt="Python" align="center" src="https://img.shields.io/badge/-Python-3776AB?style=flat&logo=python&logoColor=white" />
+  <img alt="SCSS" align="center" src="https://img.shields.io/badge/-SCSS-CC6699?style=flat&logo=sass&logoColor=white" />
+  <img alt="PostgreSQL" align="center" src="https://img.shields.io/badge/-PostgreSQL-4169E1?style=flat&logo=postgresql&logoColor=white" />
+  <img alt="Bash" align="center" src="https://img.shields.io/badge/-Bash-121011?style=flat&logo=gnubash&logoColor=white" />
+</p>
+
+### 🛠 Tools
+
+<p>
+  <img alt="Visual Studio Code" align="center" src="https://img.shields.io/badge/-Visual%20Studio%20Code-007ACC?style=flat&logo=visual-studio-code&logoColor=white" />
+  <img alt="Git" align="center" src="https://img.shields.io/badge/-Git-F05032?style=flat&logo=git&logoColor=white" />
+  <img alt="Node.js" align="center" src="https://img.shields.io/badge/-Node.js-339933?style=flat&logo=node.js&logoColor=white" />
+  <img alt="Express.js" align="center" src="https://img.shields.io/badge/-Express.js-0D1117?style=flat&logo=express&logoColor=FFFFFF" />
+  <img alt="Supabase" align="center" src="https://img.shields.io/badge/-Supabase-3ECF8E?style=flat&logo=supabase&logoColor=white" />
+</p>
+
+### 💻 Platforms
+
+<p>
+  <img alt="Windows" align="center" src="https://img.shields.io/badge/-Windows-0078D6?style=flat&logo=windows&logoColor=white" />
+  <img alt="Kali Linux" align="center" src="https://img.shields.io/badge/-Kali%20Linux-557C94?style=flat&logo=kalilinux&logoColor=white" />
+  <img alt="Linux" align="center" src="https://img.shields.io/badge/-Linux-00ADD8?style=flat&logo=linux&logoColor=white" />
+</p>
+</div>
+
+---
+
+<div align="center">
+
+## Currently Learning
+
+![C](https://img.shields.io/badge/C-000000?style=for-the-badge&logo=c&logoColor=A8B9CC)
 
 </div>
 
@@ -86,6 +120,7 @@ An inventory management project for university resources, built with a modern we
 ![Express.js](https://img.shields.io/badge/Express.js-111827?style=flat-square&logo=express&logoColor=white)
 
 ### WellBot
+
 Student support chatbot - Wellspring University Student Assistant with auth
 
 ![HTML5](https://img.shields.io/badge/HTML-111827?style=flat-square&logo=html5&logoColor=E34F26)
@@ -103,11 +138,10 @@ Student support chatbot - Wellspring University Student Assistant with auth
 
 ## GitHub Statistics
 
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=ExcellenceOseagwina&theme=github_dark" width="30.5%" /> 
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=ExcellenceOseagwina&theme=github_dark" width="50.5%" /> 
 <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=ExcellenceOseagwina&theme=github_dark" width="30.5%" />
 <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=ExcellenceOseagwina&theme=dark" width="30.5%" />
 <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=ExcellenceOseagwina&theme=dark" width="30.5%" />
-
 
 </div>
 
