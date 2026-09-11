@@ -103,12 +103,11 @@ Student support chatbot - Wellspring University Student Assistant with auth
 
 ## GitHub Statistics
 
-<img height="180" src="https://github-readme-stats.vercel.app/api?username=ExcellenceOseagwina&show_icons=true&theme=github_dark&hide_border=true&bg_color=000000&title_color=38BDF8&icon_color=38BDF8&text_color=E5E7EB" alt="GitHub stats for Excellence Oseagwina" />
-<img height="180" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ExcellenceOseagwina&layout=compact&theme=github_dark&hide_border=true&bg_color=000000&title_color=38BDF8&text_color=E5E7EB" alt="Top languages for Excellence Oseagwina" />
+-- ![](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=ExcellenceOseagwina&theme=dark) 
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=ExcellenceOseagwina&theme=github_dark" width="49.5%" />
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=ExcellenceOseagwina&theme=dark" width="49.5%" />
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=ExcellenceOseagwina&theme=dark" width="49.5%" />
 
-<br>
-
-<img src="https://streak-stats.demolab.com?user=ExcellenceOseagwina&theme=black-ice&hide_border=true&background=000000&stroke=38BDF8&ring=38BDF8&fire=F97316&currStreakLabel=38BDF8" alt="GitHub streak for Excellence Oseagwina" />
 
 </div>
 
