@@ -149,9 +149,9 @@ Student support chatbot - Wellspring University Student Assistant with auth
 
 <div align="left">
 
-- I love watching **anime** and **movies**
-- I enjoy reading **comics**, **novels**, and **manga**
-- I like exploring how things work, how they fail, and how to make them better
+* 🎬 Watching **Anime** and **Movies**
+* 📚 Reading **Comics**, **Novels**, and **Manga**
+* ⚙️ Exploring **How Things Work, Fail, and Improve**
 
 </div>
 
