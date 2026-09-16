@@ -143,6 +143,10 @@ Student support chatbot - Wellspring University Student Assistant with auth
 <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=ExcellenceOseagwina&theme=dark" width="30.5%" />
 <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=ExcellenceOseagwina&theme=dark" width="30.5%" />
 
+<a href="https://github.com/ExcellenceOseagwina">
+  <img src="https://streak-stats.demolab.com/?user=ExcellenceOseagwina&theme=dark&hide_border=true" alt="GitHub Streak" width="30.5%">
+</a>
+
 </div>
 
 <h2 align="center">Fun Facts</h2>
