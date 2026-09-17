@@ -76,12 +76,15 @@ and solving technical problems with clean, practical solutions.
 ### 🛠 Tools
 
 <p>
-  <img alt="Visual Studio Code" align="center" src="https://img.shields.io/badge/-Visual%20Studio%20Code-000000?style=flat&logo=visual-studio-code&logoColor=007ACC" />
+
+  <img alt="Visual Studio Code" align="center" src="https://img.shields.io/badge/-Visual%20Studio%20Code-000000?style=flat&logo=visualstudiocode&logoColor=007ACC" />
+  <img alt="PyCharm" align="center" src="https://img.shields.io/badge/-PyCharm-000000?style=flat&logo=pycharm&logoColor=21D789" />
   <img alt="Git" align="center" src="https://img.shields.io/badge/-Git-000000?style=flat&logo=git&logoColor=F05032" />
-  <img alt="Node.js" align="center" src="https://img.shields.io/badge/-Node.js-000000?style=flat&logo=node.js&logoColor=339933" />
+  <img alt="Node.js" align="center" src="https://img.shields.io/badge/-Node.js-000000?style=flat&logo=nodedotjs&logoColor=339933" />
   <img alt="Express.js" align="center" src="https://img.shields.io/badge/-Express.js-000000?style=flat&logo=express&logoColor=FFFFFF" />
   <img alt="Multer" align="center" src="https://img.shields.io/badge/-Multer-000000?style=flat&logo=npm&logoColor=CB3837" />
   <img alt="Supabase" align="center" src="https://img.shields.io/badge/-Supabase-000000?style=flat&logo=supabase&logoColor=3ECF8E" />
+
 </p>
 
 ### 💻 Platforms
