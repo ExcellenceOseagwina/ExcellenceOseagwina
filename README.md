@@ -84,7 +84,8 @@ and solving technical problems with clean, practical solutions.
   <img alt="Multer" align="center" src="https://img.shields.io/badge/-Multer-000000?style=flat&logo=npm&logoColor=CB3837" />
   <img alt="Supabase" align="center" src="https://img.shields.io/badge/-Supabase-000000?style=flat&logo=supabase&logoColor=3ECF8E" />
   <img alt="diagrams.net" align="center" src="https://img.shields.io/badge/-diagrams.net-000000?style=flat&logo=diagramsdotnet&logoColor=F08705" />
-
+  <img alt="VMware" align="center" src="https://img.shields.io/badge/-VMware-000000?style=flat&logo=vmware&logoColor=607078" />
+  
 </p>
 
 ### 💻 Platforms
