@@ -1,7 +1,7 @@
 <div align="center">
 
 ![Cyber Header](https://capsule-render.vercel.app/api?type=waving&height=240&color=0:000000,35:00110A,70:001B2E,100:000000&text=Excellence%20Oseagwina&fontColor=00FF9C&fontSize=50&fontAlignY=36&animation=twinkling&desc=Cybersecurity%20%7C%20Ethical%20Pentesting%20%7C%20Web%20Development&descAlignY=58&descSize=18)
-
+<a href="https://wakatime.com/@5dd4e18b-a77f-4112-a963-bdce99158e32"><img src="https://wakatime.com/badge/user/5dd4e18b-a77f-4112-a963-bdce99158e32.svg" alt="Total time coded since Sep 20 2026" /></a>
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=800&size=24&duration=2600&pause=700&color=00FF9C&center=true&vCenter=true&width=950&lines=%3E+Initializing+secure+profile...;%3E+Scanning+for+vulnerabilities...;%3E+Building+secure+web+applications...;%3E+Breaking+things+ethically+to+make+them+stronger...;%3E+Access+granted%3A+ExcellenceOseagwina)](https://git.io/typing-svg)
 
 <img src="https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake-dark.svg" alt="Animated GitHub contribution snake" />
