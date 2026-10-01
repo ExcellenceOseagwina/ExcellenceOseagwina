@@ -129,7 +129,9 @@ and solving technical problems with clean, practical solutions.
 <a href="https://github.com/ExcellenceOseagwina">
   <img src="https://streak-stats.demolab.com/?user=ExcellenceOseagwina&theme=dark&hide_border=true" alt="GitHub Streak" width="60.5%">
 </a>
-
+<img
+  src="https://github-readme-stats.vercel.app/api/top-langs/?username=ExcellenceOseagwina&layout=compact&theme=dark&hide_border=true"
+width="60.5%"/>
 </div>
 
 <h2 align="center">Fun Facts</h2>
