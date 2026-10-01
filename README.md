@@ -131,7 +131,7 @@ and solving technical problems with clean, practical solutions.
 </a>
 <img
   src="https://github-readme-stats.vercel.app/api/top-langs/?username=ExcellenceOseagwina&layout=compact&theme=dark&hide_border=true"
-width="60.5%"/>
+width="50.5%"/>
 </div>
 
 <h2 align="center">Fun Facts</h2>
