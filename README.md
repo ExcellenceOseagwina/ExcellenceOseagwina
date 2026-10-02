@@ -101,14 +101,6 @@ and solving technical problems with clean, practical solutions.
 
 <div align="center">
 
-## Currently Learning
-
-<img alt="C" align="center" src="https://img.shields.io/badge/-C-000000?style=flat&logo=c&logoColor=00FF9C" />
-
-</div>
-
-<div align="center">
-
 ## 🚀 Featured Projects
 
 | Project | Description | Tech Stack |
