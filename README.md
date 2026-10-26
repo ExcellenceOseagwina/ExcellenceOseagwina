@@ -86,6 +86,7 @@ and solving technical problems with clean, practical solutions.
   <img alt="Vercel" align="center" src="https://img.shields.io/badge/-Vercel-000000?style=flat&logo=vercel&logoColor=00FF9C" />
   <img alt="diagrams.net" align="center" src="https://img.shields.io/badge/-diagrams.net-000000?style=flat&logo=diagramsdotnet&logoColor=00FF9C" />
   <img alt="VMware" align="center" src="https://img.shields.io/badge/-VMware-000000?style=flat&logo=vmware&logoColor=00FF9C" />
+  <img alt="Cloudflare" align="center" src="https://img.shields.io/badge/-Cloudflare-000000?style=flat&logo=cloudflare&logoColor=00FF9C" />
   
 </p>
 
