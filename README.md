@@ -14,21 +14,20 @@
 
 <p>
   <img src="https://img.shields.io/badge/Ethical%20Hacking-0B7A5C?style=for-the-badge&logo=hackthebox&logoColor=white" alt="Ethical Hacking" />
-  <img src="https://img.shields.io/badge/Penetration%20Testing-C0392B?style=for-the-badge" alt="Penetration Testing" />
+  <img src="https://img.shields.io/badge/Penetration%20Testing-C0392B?style=for-the-badge&logo=burpsuite&logoColor=white" alt="Penetration Testing" />
   <img src="https://img.shields.io/badge/Web%20Security-1D6FD8?style=for-the-badge&logo=owasp&logoColor=white" alt="Web Security" />
-  <img src="https://img.shields.io/badge/Network%20Security-0F1B2D?style=for-the-badge" alt="Network Security" />
-  <img src="https://img.shields.io/badge/Threat%20Analysis-6D28D9?style=for-the-badge" alt="Threat Analysis" />
+  <img src="https://img.shields.io/badge/Network%20Security-0F1B2D?style=for-the-badge&logo=wireshark&logoColor=white" alt="Network Security" />
+  <img src="https://img.shields.io/badge/Threat%20Analysis-6D28D9?style=for-the-badge&logo=virustotal&logoColor=white" alt="Threat Analysis" />
   <img src="https://img.shields.io/badge/Kali%20Linux-557C94?style=for-the-badge&logo=kalilinux&logoColor=white" alt="Kali Linux" />
   <img src="https://img.shields.io/badge/Parrot%20OS-15E0ED?style=for-the-badge&logo=parrotsecurity&logoColor=black" alt="Parrot OS" />
 </p>
 
 ## 💻 Languages
-
 <p>
   <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css&logoColor=white" alt="CSS3" />
   <img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white" alt="Sass" />
   <img src="https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white" alt="Bash" />
 </p>
