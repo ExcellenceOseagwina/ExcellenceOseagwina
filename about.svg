@@ -35,7 +35,7 @@
   <text x="40" y="200" class="p">security-minded code.</text>
 
   <text x="40" y="236" class="pm">I like projects that solve a real problem end to end: auth,</text>
-  <text x="40" y="259" class="pm">database, tests and a security review before shipping.</text>
+  <text x="40" y="259" class="pm">database, tests and a security review.</text>
 
   <!-- right: snapshot panel -->
   <rect x="540" y="24" width="334" height="254" rx="12" class="panel"/>
