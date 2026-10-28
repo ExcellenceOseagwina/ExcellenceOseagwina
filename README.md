@@ -5,10 +5,13 @@
 <img src="about.svg" alt="About Excellence Oseagwina" width="100%" />
 
 <img src="credentials.svg" alt="Credentials - B.Sc. Cyber Security, Wellspring University" width="100%" />
-
 </div>
 
-<br />
+<br/>
+<div align="center">
+<a href="https://wakatime.com/@5dd4e18b-a77f-4112-a963-bdce99158e32"><img src="https://wakatime.com/badge/user/5dd4e18b-a77f-4112-a963-bdce99158e32.svg" alt="Total time coded since Sep 20 2026" /></a>
+</div>
+  <br />
 
 ## 🛡️ Security
 
@@ -112,26 +115,48 @@
 
 ## 📊 GitHub Stats
 
-<div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=ExcellenceOseagwina&theme=github_dark" />
-    <img alt="Profile details" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=ExcellenceOseagwina&theme=default" />
-  </picture>
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=ExcellenceOseagwina&theme=github_dark" />
-    <img alt="Repos per language" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=ExcellenceOseagwina&theme=default" />
-  </picture>
-  <br />
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=ExcellenceOseagwina&theme=github_dark" />
-    <img alt="Most used language" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=ExcellenceOseagwina&theme=default" />
-  </picture>
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=ExcellenceOseagwina&theme=github_dark" />
-    <img alt="GitHub stats" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=ExcellenceOseagwina&theme=default" />
-  </picture>
-</div>
+<!-- ============================================================
+     GITHUB STATS BLOCK  |  user: ExcellenceOseagwina
+     Theme: terminal green (#00FF41) on GitHub dark (#0D1117)
+     ============================================================ -->
 
+<div align="center">
+
+### `$ cat ~/stats.log`
+
+<!-- ROW 1: Streak (full width) -->
+<img alt="GitHub Streak" src="https://streak-stats.demolab.com/?user=ExcellenceOseagwina&theme=dark&hide_border=true&background=0D1117&ring=00FF41&fire=00FF41&currStreakLabel=00FF41&currStreakNum=FFFFFF&sideNums=FFFFFF&sideLabels=8B949E&dates=8B949E&stroke=30363D" />
+
+<br />
+
+<!-- ROW 2: Most used language (by commits) + Languages by repo -->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=ExcellenceOseagwina&theme=github_dark" />
+  <img alt="Most used language (by commits)" src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=ExcellenceOseagwina&theme=default" />
+</picture>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=ExcellenceOseagwina&theme=github_dark" />
+  <img alt="Languages by repo" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=ExcellenceOseagwina&theme=default" />
+</picture>
+
+<br />
+
+<!-- ROW 3: Overall stats + Top languages (by code size) -->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=ExcellenceOseagwina&theme=github_dark" />
+  <img alt="GitHub stats" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=ExcellenceOseagwina&theme=default" />
+</picture>
+<img alt="Top languages (by code size)" height="195" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ExcellenceOseagwina&layout=compact&hide_border=true&bg_color=0D1117&title_color=00FF41&text_color=C9D1D9&langs_count=8" />
+
+<br />
+
+<!-- ROW 4: Profile details -->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=ExcellenceOseagwina&theme=github_dark" />
+  <img alt="Profile details" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=ExcellenceOseagwina&theme=default" />
+</picture>
+
+</div>
 <br />
 
 ## 🤝 Connect
@@ -139,7 +164,7 @@
 <p>
   <a href="https://github.com/ExcellenceOseagwina"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
   <a href="https://www.linkedin.com/in/excellence-oseagwina/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-  <a href="mailto:oseagwinaexcellencegrace@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
+  <a href="mailto:oseagwinaexcellence@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
   <a href="https://x.com/excellence_ose"><img src="https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white" alt="X" /></a>
   <a href="https://dev.to/excellenceoseagwina"><img src="https://img.shields.io/badge/DEV-0A0A0A?style=for-the-badge&logo=devdotto&logoColor=white" alt="DEV" /></a>
   <a href="https://daily.dev/excellenceoseagwina"><img src="https://img.shields.io/badge/daily.dev-CE3DF3?style=for-the-badge&logo=dailydotdev&logoColor=white" alt="daily.dev" /></a>
