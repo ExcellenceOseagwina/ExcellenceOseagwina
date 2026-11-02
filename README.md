@@ -67,12 +67,11 @@
 <br />
 
 ## 🚀 Featured Projects
-
 <table>
   <tr>
     <td width="50%" valign="top">
       <h3><a href="https://github.com/ExcellenceOseagwina/wellspring-inventory">Wellspring Inventory System</a></h3>
-      <p>Web platform for managing departmental equipment digitally: authentication, inventory tracking, equipment conditions and media uploads.</p>
+      <p>Web-based platform for digitally managing departmental equipment, featuring user authentication, inventory tracking, equipment condition monitoring and media uploads.</p>
       <p>
         <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js" />
         <img src="https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white" alt="Express" />
@@ -82,7 +81,7 @@
     </td>
     <td width="50%" valign="top">
       <h3><a href="https://github.com/ExcellenceOseagwina/WellBot">WellBot</a></h3>
-      <p>Student assistant for Wellspring University: an NLP-style chatbot with authentication, conversation history and answers to university questions.</p>
+      <p>Web-based student support chatbot developed for Wellspring University, providing university-related information through an NLP-style conversational interface with user authentication and conversation history.</p>
       <p>
         <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js" />
         <img src="https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white" alt="Express" />
@@ -93,19 +92,19 @@
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <h3><a href="https://github.com/ExcellenceOseagwina/smart-farm">SmartFarm</a> <sub>(fork)</sub></h3>
-      <p>Fuzzy-logic system that analyzes environmental conditions, assesses farm health and recommends agricultural actions.</p>
+      <h3><a href="https://github.com/ExcellenceOseagwina/smart-farm">SmartFarm</a> <sub>(Fork)</sub></h3>
+      <p>Fuzzy-logic-based agricultural monitoring system that analyzes environmental conditions, evaluates farm health and provides recommendations to support agricultural decision-making.</p>
       <p>
         <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" />
       </p>
     </td>
     <td width="50%" valign="top">
-      <h3><a href="https://github.com/ExcellenceOseagwina/farm-homepage">Farm Homepage</a></h3>
-      <p>Responsive farm landing page built with HTML, CSS and JavaScript.</p>
+      <h3><a href="https://github.com/ExcellenceOseagwina/CSC-423">CSC-423</a> <sub>(Coursework)</sub></h3>
+      <p>Machine learning coursework project exploring supervised and unsupervised learning techniques through practical applications, including house price prediction, fraud detection, customer segmentation, K-Means clustering, Gaussian Mixture Models (GMM), Principal Component Analysis (PCA) and digit analysis.</p>
       <p>
-        <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5" />
-        <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS3" />
-        <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" />
+        <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
+        <img src="https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=jupyter&logoColor=white" alt="Jupyter" />
+        <img src="https://img.shields.io/badge/Scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white" alt="Scikit-learn" />
       </p>
     </td>
   </tr>
