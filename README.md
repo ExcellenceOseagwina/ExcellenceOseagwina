@@ -13,6 +13,8 @@
 
 ![Excellence Oseagwina](./header/about.svg)
 
+![Excellence Oseagwina](./skills/skills.svg)
+
 ## 🚀 Featured Projects
 <table>
   <tr>
