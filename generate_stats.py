@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate an animated GitHub stats card (SVG) for one user.
+"""Generate an animated, black "cyber-ops terminal" GitHub stats card (SVG).
 
 Usage:
     GITHUB_TOKEN=ghp_xxx python generate_stats.py            # live data
@@ -27,11 +27,23 @@ TZ = float(os.environ.get("TZ_OFFSET_HOURS", "1"))
 OUT = os.environ.get("OUT", "stats.svg")
 SAMPLE = "--sample" in sys.argv
 
-FALLBACK_COLORS = ["#4F8EF7", "#F1E05A", "#F34B7D", "#2DD4BF", "#F97316", "#C084FC"]
+# ---- palette: pure black base, terminal green primary, cyan + red/amber accents
+BG = "#000000"
+PANEL = "#05090C"
+GREEN = "#00FF9C"
+CYAN = "#00E5FF"
+RED = "#FF2E63"
+AMBER = "#FFB000"
+TEXT = "#CFF5E6"
+MUTED = "#6F8A83"
+MONO = "'JetBrains Mono','Fira Code','Cascadia Code','SF Mono',Consolas,'Courier New',monospace"
+
+FALLBACK_COLORS = ["#00E5FF", "#FFB000", "#FF2E63", "#00FF9C", "#B388FF", "#FF7A00"]
 KNOWN_COLORS = {
-    "Python": "#4F8EF7", "JavaScript": "#F1E05A", "TypeScript": "#3178C6",
-    "C": "#9AA4B2", "C++": "#F34B7D", "HTML": "#EF4444", "CSS": "#8B5CF6",
-    "Jupyter Notebook": "#F97316", "Shell": "#4ADE80", "PHP": "#8892BF",
+    "Python": "#00E5FF", "JavaScript": "#FFD400", "TypeScript": "#3B82F6",
+    "C": "#94A3B8", "C++": "#FF2E63", "HTML": "#FF5C39", "CSS": "#B388FF",
+    "Jupyter Notebook": "#FF7A00", "Shell": "#00FF9C", "PHP": "#8892BF",
+    "Go": "#00ADD8", "Rust": "#FF9E64", "Java": "#FFB000",
 }
 
 
@@ -182,8 +194,10 @@ def analyse(base, days, repos):
             hours[int((t.hour + TZ) % 24)] += 1
     cur, longest = streaks(days)
     created = dt.datetime.fromisoformat(base["createdAt"].replace("Z", "+00:00"))
+    today = dt.date.today()
+    recent = [days.get((today - dt.timedelta(days=27 - i)).isoformat(), 0) for i in range(28)]
     return dict(
-        total=sum(days.values()), cur=cur, longest=longest,
+        total=sum(days.values()), cur=cur, longest=longest, recent=recent,
         by_repo=pct_rows(by_repo), by_commit=pct_rows(by_commit),
         by_bytes=pct_rows(by_bytes, 6), hours=[hours.get(h, 0) for h in range(24)],
         colors=colors, stars=stars, commits=commits,
@@ -193,14 +207,31 @@ def analyse(base, days, repos):
 
 # --------------------------------------------------------------- render ----
 def color(a, name, i):
-    return a["colors"].get(name) or KNOWN_COLORS.get(name) or (
-        "#64748B" if name == "Other" else FALLBACK_COLORS[i % len(FALLBACK_COLORS)])
+    if name == "Other":
+        return "#64748B"
+    return KNOWN_COLORS.get(name) or a["colors"].get(name) or FALLBACK_COLORS[i % len(FALLBACK_COLORS)]
 
 
-def donut(a, rows, cx, cy, r=52, w=22, delay=0.6):
+def panel(x, y, w, h, title, body, delay, accent=GREEN):
+    """A terminal window: dark glass, corner brackets, `// title` label."""
+    L = 14
+    corners = (f"M{x},{y + L} V{y} H{x + L} M{x + w - L},{y} H{x + w} V{y + L} "
+               f"M{x + w},{y + h - L} V{y + h} H{x + w - L} M{x + L},{y + h} H{x} V{y + h - L}")
+    return (f'<g class="fade" style="animation-delay:{delay:.2f}s">'
+            f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="3" fill="{PANEL}" fill-opacity=".92" '
+            f'stroke="{accent}" stroke-opacity=".22"/>'
+            f'<path d="{corners}" fill="none" stroke="{accent}" stroke-width="2" filter="url(#glow)"/>'
+            f'<text x="{x + 22}" y="{y + 31}" font-size="13" font-weight="700" fill="{accent}">'
+            f'// {escape(title)}</text>'
+            f'<line x1="{x + 22}" y1="{y + 43}" x2="{x + w - 22}" y2="{y + 43}" stroke="{accent}" '
+            f'stroke-opacity=".16" stroke-dasharray="2 4"/>'
+            f'{body}</g>')
+
+
+def donut(a, rows, cx, cy, r=46, w=18, delay=0.6):
     circ = 2 * 3.14159265 * r
     parts = [f'<circle cx="{cx}" cy="{cy}" r="{r}" fill="none" stroke="#fff" '
-             f'stroke-opacity=".07" stroke-width="{w}"/>']
+             f'stroke-opacity=".06" stroke-width="{w}"/>']
     off = 0.0
     for i, (name, p) in enumerate(rows):
         ln = max(p / 100 * circ - 2, 0.5)
@@ -211,10 +242,10 @@ def donut(a, rows, cx, cy, r=52, w=22, delay=0.6):
             f'transform="rotate(-90 {cx} {cy})" style="animation-delay:{delay + i * .18:.2f}s"/>')
         off += p / 100 * circ
     if rows:
-        parts.append(f'<text x="{cx}" y="{cy + 2}" text-anchor="middle" font-size="22" '
-                     f'font-weight="800" fill="url(#num)">{rows[0][1]:.0f}%</text>'
-                     f'<text x="{cx}" y="{cy + 19}" text-anchor="middle" font-size="11" '
-                     f'fill="#8B94B3">{escape(rows[0][0][:12])}</text>')
+        parts.append(f'<text x="{cx}" y="{cy + 3}" text-anchor="middle" font-size="19" '
+                     f'font-weight="800" fill="{TEXT}">{rows[0][1]:.0f}%</text>'
+                     f'<text x="{cx}" y="{cy + 18}" text-anchor="middle" font-size="9.5" '
+                     f'fill="{MUTED}">{escape(rows[0][0][:10])}</text>')
     return "".join(parts)
 
 
@@ -222,144 +253,230 @@ def legend(a, rows, x, y):
     out = []
     for i, (name, p) in enumerate(rows):
         yy = y + i * 27
-        out.append(f'<circle cx="{x}" cy="{yy - 4}" r="5" fill="{color(a, name, i)}"/>'
-                   f'<text x="{x + 16}" y="{yy}" font-size="13" fill="#E8ECF8">{escape(name[:16])}</text>'
-                   f'<text x="{x + 175}" y="{yy}" text-anchor="end" font-size="13" '
-                   f'font-weight="600" fill="#8B94B3">{p:.0f}%</text>')
+        out.append(f'<rect x="{x}" y="{yy - 9}" width="9" height="9" rx="1" fill="{color(a, name, i)}"/>'
+                   f'<text x="{x + 18}" y="{yy}" font-size="13" fill="{TEXT}">{escape(name[:14])}</text>'
+                   f'<text x="{x + 176}" y="{yy}" text-anchor="end" font-size="13" '
+                   f'font-weight="700" fill="{MUTED}">{p:.0f}%</text>')
     return "".join(out)
 
 
-def tile(x, y, w, h, title, edge=False):
-    stroke = 'url(#edge)' if edge else '#FFFFFF'
-    op = 1 if edge else .09
-    return (f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="20" fill="#fff" '
-            f'fill-opacity=".04" stroke="{stroke}" stroke-opacity="{op}" stroke-width="1.2"/>'
-            f'<text x="{x + 26}" y="{y + 38}" font-size="16" font-weight="700" '
-            f'fill="#E8ECF8">{escape(title)}</text>')
+def chronotype(hours):
+    if not any(hours):
+        return "no data"
+    p = max(range(24), key=lambda h: hours[h])
+    if 5 <= p < 12:
+        return "early bird"
+    if 12 <= p < 18:
+        return "daytime builder"
+    if 18 <= p < 22:
+        return "evening hacker"
+    return "night owl"
+
+
+STYLE = """
+text{font-family:__MONO__;font-variant-numeric:tabular-nums}
+.fade{animation:fade .7s cubic-bezier(.2,.8,.2,1) both}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}}
+.b{transform-box:fill-box;transform-origin:50% 100%;animation:grow .9s cubic-bezier(.2,.8,.2,1) both}
+@keyframes grow{from{transform:scaleY(0)}}
+.hb{transform-box:fill-box;transform-origin:0 50%;animation:growx .9s cubic-bezier(.2,.8,.2,1) both}
+@keyframes growx{from{transform:scaleX(0)}}
+.seg{animation:draw .9s cubic-bezier(.2,.8,.2,1) both}
+@keyframes draw{from{stroke-dasharray:0 400}}
+.ring{animation:ring 1.4s cubic-bezier(.2,.8,.2,1) both}
+@keyframes ring{from{stroke-dashoffset:302}}
+.spin{transform-box:fill-box;transform-origin:center;animation:spin 18s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.spin-r{transform-box:fill-box;transform-origin:center;animation:spin 28s linear infinite reverse}
+.scan{animation:scan 7s linear infinite}
+@keyframes scan{from{transform:translateY(-90px)}to{transform:translateY(__H__px)}}
+.blink{animation:blink 1.05s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.pulse{animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.25}}
+.type{animation:type 2.4s steps(__N__) .2s both}
+@keyframes type{from{width:0}}
+.sweep{animation:sweep 5s ease-in-out infinite}
+@keyframes sweep{0%,100%{opacity:.25}50%{opacity:1}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+""".replace("__MONO__", MONO)
 
 
 def render(base, a, sample):
-    H = 990
+    H = 1022
+    cmd = f"$ ./gh-stats --user {USER} --mode=full"
     s = []
     s.append(f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 {H}" width="1200" height="{H}" role="img" aria-labelledby="t d">
 <title id="t">GitHub stats for {escape(USER)}</title>
 <desc id="d">Contributions, streaks, profile details, commits by hour and top languages by repository, by commit and by code size.</desc>
-<style>
-text{{font-family:'Segoe UI Variable Display','Segoe UI',Inter,system-ui,-apple-system,Roboto,Arial,sans-serif;font-variant-numeric:tabular-nums}}
-.b{{transform-box:fill-box;transform-origin:50% 100%;animation:grow .9s cubic-bezier(.2,.8,.2,1) both}}
-@keyframes grow{{from{{transform:scaleY(0)}}}}
-.seg{{animation:draw .9s cubic-bezier(.2,.8,.2,1) both}}
-@keyframes draw{{from{{stroke-dasharray:0 400}}}}
-.ring{{animation:ring 1.4s cubic-bezier(.2,.8,.2,1) both}}
-@keyframes ring{{from{{stroke-dashoffset:352}}}}
-.fade{{animation:fade .8s ease both}}
-@keyframes fade{{from{{opacity:0;transform:translateY(6px)}}}}
-@media (prefers-reduced-motion:reduce){{*{{animation:none!important}}}}
-</style>
+<style>{STYLE.replace("__H__", str(H)).replace("__N__", str(len(cmd) + 1))}</style>
 <defs>
-<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0A0F1F"/><stop offset="1" stop-color="#0F1530"/></linearGradient>
-<radialGradient id="gA" cx=".12" cy=".05" r=".55"><stop offset="0" stop-color="#7C5CFF" stop-opacity=".28"/><stop offset="1" stop-color="#7C5CFF" stop-opacity="0"/></radialGradient>
-<radialGradient id="gB" cx=".92" cy=".98" r=".5"><stop offset="0" stop-color="#22D3EE" stop-opacity=".2"/><stop offset="1" stop-color="#22D3EE" stop-opacity="0"/></radialGradient>
-<pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#fff" fill-opacity=".055"/></pattern>
-<linearGradient id="num" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#C9D2F5"/></linearGradient>
-<linearGradient id="ringg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5EEAD4"/><stop offset=".55" stop-color="#818CF8"/><stop offset="1" stop-color="#C084FC"/></linearGradient>
-<linearGradient id="bar" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8B9BFF"/><stop offset="1" stop-color="#4338CA" stop-opacity=".75"/></linearGradient>
-<linearGradient id="peak" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7CF3E0"/><stop offset="1" stop-color="#6366F1"/></linearGradient>
-<linearGradient id="edge" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5EEAD4" stop-opacity=".55"/><stop offset=".5" stop-color="#818CF8" stop-opacity=".35"/><stop offset="1" stop-color="#C084FC" stop-opacity=".55"/></linearGradient>
-<filter id="glow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-<clipPath id="frame"><rect width="1200" height="{H}" rx="28"/></clipPath>
+<pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="{GREEN}" stroke-opacity=".045"/></pattern>
+<radialGradient id="vig" cx=".5" cy=".45" r=".75"><stop offset=".55" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".85"/></radialGradient>
+<radialGradient id="gA" cx=".08" cy=".02" r=".5"><stop offset="0" stop-color="{GREEN}" stop-opacity=".13"/><stop offset="1" stop-color="{GREEN}" stop-opacity="0"/></radialGradient>
+<radialGradient id="gB" cx=".95" cy=".98" r=".45"><stop offset="0" stop-color="{CYAN}" stop-opacity=".11"/><stop offset="1" stop-color="{CYAN}" stop-opacity="0"/></radialGradient>
+<linearGradient id="scang" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="{GREEN}" stop-opacity="0"/><stop offset=".92" stop-color="{GREEN}" stop-opacity=".07"/><stop offset="1" stop-color="{GREEN}" stop-opacity=".4"/></linearGradient>
+<pattern id="lines" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="1" fill="#000" fill-opacity=".28"/></pattern>
+<linearGradient id="ringg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="{GREEN}"/><stop offset="1" stop-color="{CYAN}"/></linearGradient>
+<linearGradient id="bar" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="{CYAN}" stop-opacity=".9"/><stop offset="1" stop-color="{CYAN}" stop-opacity=".15"/></linearGradient>
+<linearGradient id="peak" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="{GREEN}"/><stop offset="1" stop-color="{GREEN}" stop-opacity=".25"/></linearGradient>
+<filter id="glow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<filter id="glow2" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<clipPath id="frame"><rect width="1200" height="{H}" rx="14"/></clipPath>
+<clipPath id="typeclip"><rect class="type" x="118" y="34" width="{len(cmd) * 10 + 30}" height="30"/></clipPath>
 </defs>
-<g clip-path="url(#frame)"><rect width="1200" height="{H}" fill="url(#bg)"/><rect width="1200" height="{H}" fill="url(#dots)"/><rect width="1200" height="{H}" fill="url(#gA)"/><rect width="1200" height="{H}" fill="url(#gB)"/></g>
-<rect x=".5" y=".5" width="1199" height="{H - 1}" rx="28" fill="none" stroke="#fff" stroke-opacity=".08"/>
-<text x="40" y="54" font-size="27" font-weight="800" fill="#E8ECF8" letter-spacing="-.4">GitHub stats</text>
-<text x="40" y="78" font-size="14" fill="#8B94B3">@{escape(USER)}</text>''')
+<g clip-path="url(#frame)">
+<rect width="1200" height="{H}" fill="{BG}"/>
+<rect width="1200" height="{H}" fill="url(#grid)"/>
+<rect width="1200" height="{H}" fill="url(#gA)"/>
+<rect width="1200" height="{H}" fill="url(#gB)"/>
+</g>
+<rect x=".5" y=".5" width="1199" height="{H - 1}" rx="14" fill="none" stroke="{GREEN}" stroke-opacity=".18"/>''')
 
+    # --- terminal title bar
+    s.append(f'''<g class="fade">
+<rect x="40" y="24" width="1120" height="56" rx="3" fill="{PANEL}" stroke="{GREEN}" stroke-opacity=".22"/>
+<circle cx="64" cy="52" r="5" fill="{RED}"/><circle cx="84" cy="52" r="5" fill="{AMBER}"/><circle cx="104" cy="52" r="5" fill="{GREEN}"/>
+<g clip-path="url(#typeclip)"><text x="124" y="58" font-size="17" font-weight="700" fill="{GREEN}" filter="url(#glow)">{escape(cmd)}<tspan class="blink" fill="{GREEN}">█</tspan></text></g>''')
     if sample:
-        s.append('<text x="1160" y="54" text-anchor="end" font-size="13" font-weight="700" '
-                 'fill="#F97316">PREVIEW - SAMPLE NUMBERS, NOT REAL DATA</text>')
+        s.append(f'<text x="1138" y="57" text-anchor="end" font-size="13" font-weight="700" fill="{AMBER}">'
+                 f'[ PREVIEW: SAMPLE DATA ]</text>')
+    else:
+        s.append(f'<circle class="pulse" cx="1000" cy="52" r="5" fill="{GREEN}" filter="url(#glow)"/>'
+                 f'<text x="1138" y="57" text-anchor="end" font-size="13" font-weight="700" fill="{GREEN}">'
+                 f'SESSION ACTIVE</text>')
+    s.append("</g>")
 
     # --- row A: contributions / current streak / longest streak
-    s.append(tile(40, 96, 300, 190, "Total contributions"))
-    s.append(f'<text class="fade" x="66" y="215" font-size="68" font-weight="800" fill="url(#num)">{a["total"]:,}</text>')
-    s.append(f'<text x="66" y="260" font-size="13" font-weight="600" fill="#5EEAD4">{escape(fmt_date(a["first"]))} to present</text>')
+    ay, ah = 104, 190
+    mxr = max(a["recent"]) or 1
+    spark = "".join(
+        f'<rect class="b" x="{90 + i * 9}" y="{ay + 178 - max(v / mxr * 18, 2 if v else 1):.1f}" width="6" '
+        f'height="{max(v / mxr * 18, 2 if v else 1):.1f}" fill="{GREEN if v else "#fff"}" '
+        f'fill-opacity="{1 if v else .12}" style="animation-delay:{.5 + i * .02:.2f}s"/>'
+        for i, v in enumerate(a["recent"]))
+    body = (f'<text x="62" y="{ay + 112}" font-size="58" font-weight="800" fill="{TEXT}" filter="url(#glow)">{a["total"]:,}</text>'
+            f'<text x="62" y="{ay + 138}" font-size="12" fill="{CYAN}">{escape(fmt_date(a["first"]))} → now</text>'
+            f'<text x="62" y="{ay + 177}" font-size="11" fill="{MUTED}">28d</text>{spark}')
+    s.append(panel(40, ay, 300, ah, "total_contributions", body, .15))
 
     n, st, en = a["cur"]
-    s.append(tile(360, 96, 480, 190, "Current streak", edge=True))
     frac = min(n / max(a["longest"][0], 1), 1)
-    s.append('<circle cx="472" cy="206" r="56" fill="none" stroke="#fff" stroke-opacity=".1" stroke-width="10"/>'
-             f'<circle class="ring" cx="472" cy="206" r="56" fill="none" stroke="url(#ringg)" stroke-width="10" '
-             f'stroke-linecap="round" stroke-dasharray="351.86" stroke-dashoffset="{351.86 * (1 - frac):.2f}" '
-             'transform="rotate(-90 472 206)" filter="url(#glow)"/>'
-             f'<text x="472" y="214" text-anchor="middle" font-size="40" font-weight="800" fill="url(#num)">{n}</text>'
-             '<text x="472" y="234" text-anchor="middle" font-size="12" font-weight="600" fill="#8B94B3">days</text>')
-    rng = f"{fmt_date(st)} to {fmt_date(en)}" if n else "No active streak"
-    note = "Matches the longest streak" if n and n == a["longest"][0] else \
-        f"{max(a['longest'][0] - n, 0)} days from the record"
-    s.append(f'<text x="574" y="180" font-size="19" font-weight="700" fill="#E8ECF8">Keep it going</text>'
-             f'<text x="574" y="206" font-size="14" font-weight="600" fill="#5EEAD4">{escape(rng)}</text>'
-             f'<text x="574" y="234" font-size="13" fill="#8B94B3">{escape(note)}</text>')
+    cx, cy = 150 + 360, ay + 124
+    active = n > 0
+    status_c = GREEN if active else RED
+    rng = f"{fmt_date(st)} → {fmt_date(en)}" if n else "no active streak"
+    note = ("matches the record" if n and n == a["longest"][0]
+            else f"{max(a['longest'][0] - n, 0)} days to beat the record")
+    body = (f'<circle class="spin" cx="{cx}" cy="{cy}" r="60" fill="none" stroke="{CYAN}" stroke-opacity=".5" '
+            f'stroke-dasharray="3 9"/>'
+            f'<circle class="spin-r" cx="{cx}" cy="{cy}" r="68" fill="none" stroke="{GREEN}" stroke-opacity=".18" '
+            f'stroke-dasharray="14 22"/>'
+            f'<circle cx="{cx}" cy="{cy}" r="48" fill="none" stroke="#fff" stroke-opacity=".08" stroke-width="9"/>'
+            f'<circle class="ring" cx="{cx}" cy="{cy}" r="48" fill="none" stroke="url(#ringg)" stroke-width="9" '
+            f'stroke-linecap="round" stroke-dasharray="301.59" stroke-dashoffset="{301.59 * (1 - frac):.2f}" '
+            f'transform="rotate(-90 {cx} {cy})" filter="url(#glow)"/>'
+            f'<text x="{cx}" y="{cy + 8}" text-anchor="middle" font-size="32" font-weight="800" fill="{TEXT}">{n}</text>'
+            f'<text x="{cx}" y="{cy + 25}" text-anchor="middle" font-size="11" fill="{MUTED}">days</text>'
+            f'<circle class="pulse" cx="{cx + 124}" cy="{cy - 37}" r="5" fill="{status_c}" filter="url(#glow)"/>'
+            f'<text x="{cx + 138}" y="{cy - 32}" font-size="15" font-weight="700" fill="{status_c}">'
+            f'{"STREAK ALIVE" if active else "STREAK BROKEN"}</text>'
+            f'<text x="{cx + 124}" y="{cy - 4}" font-size="14" fill="{TEXT}">{escape(rng)}</text>'
+            f'<text x="{cx + 124}" y="{cy + 22}" font-size="12.5" fill="{MUTED}">{escape(note)}</text>')
+    s.append(panel(360, ay, 480, ah, "current_streak", body, .3, accent=CYAN))
 
     n2, st2, en2 = a["longest"]
-    s.append(tile(860, 96, 300, 190, "Longest streak"))
-    s.append(f'<text class="fade" x="886" y="215" font-size="68" font-weight="800" fill="url(#num)">{n2}</text>'
-             f'<text x="{886 + 40 * len(str(n2)) + 12}" y="215" font-size="20" font-weight="600" fill="#8B94B3">days</text>'
-             f'<text x="886" y="260" font-size="13" font-weight="600" fill="#5EEAD4">'
-             f'{escape(fmt_date(st2))} to {escape(fmt_date(en2))}</text>')
+    body = (f'<text x="886" y="{ay + 112}" font-size="58" font-weight="800" fill="{TEXT}" filter="url(#glow)">{n2}</text>'
+            f'<text x="{886 + 35 * len(str(n2)) + 12}" y="{ay + 112}" font-size="18" fill="{MUTED}">days</text>'
+            f'<text x="886" y="{ay + 138}" font-size="12" fill="{CYAN}">{escape(fmt_date(st2))} → {escape(fmt_date(en2))}</text>'
+            f'<rect x="886" y="{ay + 160}" width="228" height="6" rx="3" fill="#fff" fill-opacity=".08"/>'
+            f'<rect class="hb" x="886" y="{ay + 160}" width="{228 * frac:.1f}" height="6" rx="3" fill="{GREEN}" filter="url(#glow)"/>'
+            f'<text x="886" y="{ay + 181}" font-size="11" fill="{MUTED}">current vs record: {frac * 100:.0f}%</text>')
+    s.append(panel(860, ay, 300, ah, "longest_streak", body, .45))
 
-    # --- row B: profile details / statistics
-    s.append(tile(40, 306, 540, 180, "Profile details"))
-    bio = (base.get("bio") or "No bio yet")[:64]
-    rows = [("Name", base.get("name") or USER), ("Bio", bio),
-            ("Location", base.get("location") or "-"), ("Joined GitHub", a["since"]),
-            ("Followers / following", f'{base["followers"]["totalCount"]} / {base["following"]["totalCount"]}')]
+    # --- row B: profile / statistics
+    by = 314
+    bio = (base.get("bio") or "No bio yet")
+    bio = bio if len(bio) <= 46 else bio[:45] + "…"
+    rows = [("name", base.get("name") or USER), ("bio", bio),
+            ("location", base.get("location") or "-"), ("joined", a["since"]),
+            ("network", f'{base["followers"]["totalCount"]} followers · {base["following"]["totalCount"]} following')]
+    body = ""
     for i, (k, v) in enumerate(rows):
-        y = 372 + i * 22
-        s.append(f'<text x="66" y="{y}" font-size="13" fill="#8B94B3">{k}</text>'
-                 f'<text x="230" y="{y}" font-size="13" font-weight="600" fill="#E8ECF8">{escape(str(v))}</text>')
+        y = by + 76 + i * 21
+        body += (f'<text x="62" y="{y}" font-size="13" fill="{GREEN}">›</text>'
+                 f'<text x="78" y="{y}" font-size="13" fill="{CYAN}">{k}</text>'
+                 f'<text x="160" y="{y}" font-size="13" fill="{TEXT}">{escape(str(v))}</text>')
+    s.append(panel(40, by, 540, 180, "whoami", body, .6))
 
-    s.append(tile(600, 306, 560, 180, "GitHub statistics"))
-    kpis = [(base["repositories"]["totalCount"], "Public repos"), (a["stars"], "Stars earned"),
-            (a["commits"], "Commits"), (a["total"], "Contributions")]
+    kpis = [(base["repositories"]["totalCount"], "public repos"), (a["stars"], "stars earned"),
+            (a["commits"], "commits"), (a["total"], "contributions")]
+    body = ""
     for i, (v, lab) in enumerate(kpis):
         x = 626 + i * 132
-        s.append(f'<text x="{x}" y="415" font-size="34" font-weight="800" fill="url(#num)">{v:,}</text>'
-                 f'<text x="{x}" y="437" font-size="11" fill="#8B94B3">{escape(lab[:26])}</text>')
-    s.append(f'<text x="626" y="468" font-size="12" fill="#5EEAD4">Most used language: '
-             f'{escape(a["by_bytes"][0][0]) if a["by_bytes"] else "-"}</text>')
+        body += (f'<text x="{x}" y="{by + 100}" font-size="30" font-weight="800" fill="{TEXT}">{v:,}</text>'
+                 f'<text x="{x}" y="{by + 120}" font-size="11" fill="{MUTED}">{escape(lab)}</text>'
+                 f'<rect x="{x}" y="{by + 130}" width="40" height="2" fill="{GREEN if i % 2 == 0 else CYAN}" '
+                 f'class="sweep" style="animation-delay:{i * .4:.1f}s"/>')
+    top = a["by_bytes"][0][0] if a["by_bytes"] else "-"
+    tc = color(a, top, 0)
+    body += (f'<text x="626" y="{by + 162}" font-size="12" fill="{MUTED}">top_language:</text>'
+             f'<rect x="716" y="{by + 153}" width="9" height="9" rx="1" fill="{tc}"/>'
+             f'<text x="732" y="{by + 162}" font-size="12" font-weight="700" fill="{TEXT}">{escape(top)}</text>')
+    s.append(panel(600, by, 560, 180, "stats --summary", body, .75, accent=CYAN))
 
     # --- row C: commits by hour
-    s.append(tile(40, 506, 1120, 200, "Commits by hour"))
-    s.append(f'<text x="1134" y="544" text-anchor="end" font-size="13" fill="#8B94B3">UTC{TZ:+g}</text>')
+    cy0 = 514
+    body = (f'<text x="1138" y="{cy0 + 31}" text-anchor="end" font-size="12" fill="{MUTED}">'
+            f'UTC{TZ:+g} · profile: <tspan fill="{GREEN}" font-weight="700">{chronotype(a["hours"])}</tspan></text>')
     mx = max(a["hours"]) or 1
-    base_y, top = 672, 70
-    s.append(f'<line x1="70" y1="{base_y}" x2="1134" y2="{base_y}" stroke="#fff" stroke-opacity=".16"/>')
+    base_y, th = cy0 + 166, 78
+    body += f'<line x1="70" y1="{base_y}" x2="1134" y2="{base_y}" stroke="{GREEN}" stroke-opacity=".25"/>'
+    for g in (.5, 1):
+        body += (f'<line x1="70" y1="{base_y - th * g:.1f}" x2="1134" y2="{base_y - th * g:.1f}" '
+                 f'stroke="#fff" stroke-opacity=".05" stroke-dasharray="3 6"/>')
     peaks = set(sorted(range(24), key=lambda h: -a["hours"][h])[:3]) if max(a["hours"]) else set()
     for h, v in enumerate(a["hours"]):
-        bh = max(v / mx * top, 2 if v else 0)
+        bh = max(v / mx * th, 2 if v else 0)
         x = 80 + h * 43.5
-        s.append(f'<rect class="b" x="{x:.1f}" y="{base_y - bh:.1f}" width="26" height="{bh:.1f}" rx="5" '
-                 f'fill="url(#{"peak" if h in peaks else "bar"})" style="animation-delay:{h * .03:.2f}s"/>')
+        body += (f'<rect class="b" x="{x:.1f}" y="{base_y - bh:.1f}" width="26" height="{bh:.1f}" rx="2" '
+                 f'fill="url(#{"peak" if h in peaks else "bar"})" '
+                 f'{"filter=" + chr(34) + "url(#glow)" + chr(34) if h in peaks else ""} '
+                 f'style="animation-delay:{h * .03:.2f}s"/>')
+        if v and h in peaks:
+            body += (f'<text x="{x + 13:.1f}" y="{base_y - bh - 6:.1f}" text-anchor="middle" '
+                     f'font-size="10" fill="{GREEN}">{v}</text>')
         if h % 3 == 0 or h == 23:
-            s.append(f'<text x="{x + 13:.1f}" y="{base_y + 18}" text-anchor="middle" font-size="11" '
-                     f'fill="#8B94B3">{h:02d}</text>')
+            body += (f'<text x="{x + 13:.1f}" y="{base_y + 18}" text-anchor="middle" font-size="11" '
+                     f'fill="{MUTED}">{h:02d}h</text>')
+    s.append(panel(40, cy0, 1120, 200, "commits_by_hour", body, .9))
 
-    # --- row D: three language tiles
-    ty = 726
-    s.append(tile(40, ty, 360, 240, "Top languages by repository"))
-    s.append(legend(a, a["by_repo"], 66, ty + 80))
-    s.append(donut(a, a["by_repo"], 330, ty + 150))
-    s.append(tile(420, ty, 360, 240, "Top languages by commit"))
-    s.append(legend(a, a["by_commit"], 446, ty + 80))
-    s.append(donut(a, a["by_commit"], 710, ty + 150, delay=.9))
-    s.append(tile(800, ty, 360, 240, "Most used languages (code size)"))
+    # --- row D: language panels
+    ty = 734
+    body = legend(a, a["by_repo"], 66, ty + 80) + donut(a, a["by_repo"], 328, ty + 140)
+    s.append(panel(40, ty, 360, 240, "langs --by-repo", body, 1.05, accent=CYAN))
+    body = legend(a, a["by_commit"], 446, ty + 80) + donut(a, a["by_commit"], 708, ty + 140, delay=.9)
+    s.append(panel(420, ty, 360, 240, "langs --by-commit", body, 1.2))
+    body = ""
     for i, (name, p) in enumerate(a["by_bytes"]):
-        y = ty + 76 + i * 25
-        s.append(f'<text x="826" y="{y}" font-size="12" fill="#E8ECF8">{escape(name[:20])}</text>'
-                 f'<rect x="960" y="{y - 10}" width="150" height="9" rx="4.5" fill="#fff" fill-opacity=".07"/>'
-                 f'<rect class="b" x="960" y="{y - 10}" width="{max(p * 1.3, 3):.1f}" height="9" rx="4.5" '
-                 f'fill="{color(a, name, i)}" style="transform-origin:0 50%;animation:none"/>'
-                 f'<text x="1134" y="{y}" text-anchor="end" font-size="12" font-weight="600" '
-                 f'fill="#8B94B3">{p:.0f}%</text>')
+        y = ty + 76 + i * 24
+        c = color(a, name, i)
+        body += (f'<text x="826" y="{y}" font-size="12" fill="{TEXT}">{escape(name[:14])}</text>'
+                 f'<rect x="936" y="{y - 9}" width="150" height="8" rx="1" fill="#fff" fill-opacity=".07"/>'
+                 f'<rect class="hb" x="936" y="{y - 9}" width="{max(p * 1.5, 3):.1f}" height="8" rx="1" '
+                 f'fill="{c}" style="animation-delay:{1.4 + i * .1:.1f}s"/>'
+                 f'<text x="1134" y="{y}" text-anchor="end" font-size="12" font-weight="700" '
+                 f'fill="{MUTED}">{p:.0f}%</text>')
+    s.append(panel(800, ty, 360, 240, "langs --by-size", body, 1.35, accent=CYAN))
+
+    # --- footer + global fx (scanline sweep & CRT lines sit on top)
+    now = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+    s.append(f'<text x="40" y="{H - 22}" font-size="11" fill="{MUTED}">[ updated {now} ]  '
+             f'<tspan fill="{GREEN}">exit 0</tspan><tspan class="blink" fill="{GREEN}"> █</tspan></text>')
+    s.append(f'<g clip-path="url(#frame)" pointer-events="none">'
+             f'<rect width="1200" height="{H}" fill="url(#lines)"/>'
+             f'<rect class="scan" width="1200" height="90" fill="url(#scang)"/>'
+             f'<rect width="1200" height="{H}" fill="url(#vig)"/></g>')
     s.append("</svg>")
     return "\n".join(s)
 
