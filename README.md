@@ -11,58 +11,7 @@
 </div>
   <br />
 
-## 🛡️ Security
-
-<p>
-  <img src="https://img.shields.io/badge/Ethical%20Hacking-0B7A5C?style=for-the-badge&logo=hackthebox&logoColor=white" alt="Ethical Hacking" />
-  <img src="https://img.shields.io/badge/Penetration%20Testing-C0392B?style=for-the-badge&logo=burpsuite&logoColor=white" alt="Penetration Testing" />
-  <img src="https://img.shields.io/badge/Web%20Security-1D6FD8?style=for-the-badge&logo=owasp&logoColor=white" alt="Web Security" />
-  <img src="https://img.shields.io/badge/Network%20Security-0F1B2D?style=for-the-badge&logo=wireshark&logoColor=white" alt="Network Security" />
-  <img src="https://img.shields.io/badge/Threat%20Analysis-6D28D9?style=for-the-badge&logo=virustotal&logoColor=white" alt="Threat Analysis" />
-  <img src="https://img.shields.io/badge/Kali%20Linux-557C94?style=for-the-badge&logo=kalilinux&logoColor=white" alt="Kali Linux" />
-  <img src="https://img.shields.io/badge/Parrot%20OS-15E0ED?style=for-the-badge&logo=parrotsecurity&logoColor=black" alt="Parrot OS" />
-</p>
-
-## 💻 Languages
-<p>
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css&logoColor=white" alt="CSS3" />
-  <img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white" alt="Sass" />
-  <img src="https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white" alt="Bash" />
-</p>
-
-## ⚙️ Backend & Data
-
-<p>
-  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js" />
-  <img src="https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express" />
-  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" />
-  <img src="https://img.shields.io/badge/Supabase-3FCF8E?style=for-the-badge&logo=supabase&logoColor=white" alt="Supabase" />
-</p>
-
-## 🧰 Tools & Platforms
-
-<p>
-  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
-  <img src="https://img.shields.io/badge/VS%20Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white" alt="VS Code" />
-  <img src="https://img.shields.io/badge/PyCharm-000000?style=for-the-badge&logo=pycharm&logoColor=white" alt="PyCharm" />
-  <img src="https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white" alt="Jupyter" />
-  <img src="https://img.shields.io/badge/VMware-607078?style=for-the-badge&logo=vmware&logoColor=white" alt="VMware" />
-  <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel" />
-  <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux" />
-  <img src="https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white" alt="Windows" />
-</p>
-
-## 🌱 Currently Learning
-
-<p>
-  <img src="https://img.shields.io/badge/Python%20(deep%20dive)-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
-
-</p>
-
-<br />
+![Excellence Oseagwina](./header/about.svg)
 
 ## 🚀 Featured Projects
 <table>
