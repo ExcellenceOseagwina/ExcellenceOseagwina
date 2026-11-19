@@ -1,11 +1,9 @@
 <div align="center">
 
-<img src="hero.svg" alt="Excellence Oseagwina - Cybersecurity Engineer in progress" width="100%" />
+![Excellence Oseagwina](./header/header.svg)
 
-<img src="about.svg" alt="About Excellence Oseagwina" width="100%" />
-
-<img src="credentials.svg" alt="Credentials - B.Sc. Cyber Security, Wellspring University" width="100%" />
 </div>
+
 
 <br/>
 <div align="center">
