@@ -74,6 +74,7 @@
 ### `$ cat ~/stats.log`
 
 <!-- ROW 1: GitHub Streak -->
+![GitHub stats](./stats.svg)
 
 <img
   alt="GitHub Streak"
