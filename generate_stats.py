@@ -193,6 +193,8 @@ def pct_rows(counter, n=5):
         raise ValueError("n must be at least 1")
     if any(value < 0 for value in counter.values()):
         raise ValueError("counter values cannot be negative")
+    if not counter:
+        return []
     total = sum(counter.values()) or 1
     rows = counter.most_common(n)
     rest = total - sum(v for _, v in rows)
