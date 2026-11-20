@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Animated black "cyber-ops terminal" GitHub stats card (SVG), v2.
 
 Usage:
@@ -69,7 +68,7 @@ def gql(query, variables=None, *, retries=3, timeout=30, opener=None, sleep=time
             with open_request(request, timeout=timeout) as response:
                 payload = json.load(response)
             if not isinstance(payload, dict):
-                raise RuntimeError("GitHub GraphQL returned an invalid response.")
+                raise TypeError("GitHub GraphQL returned an invalid response.")
             if payload.get("errors"):
                 raise RuntimeError(f"GitHub GraphQL error: {payload['errors']}")
             if not payload.get("data"):
@@ -99,7 +98,7 @@ def fetch_live():
     }}""", {"l": USER})["user"]
 
     created = dt.datetime.fromisoformat(base["createdAt"].replace("Z", "+00:00"))
-    today = dt.datetime.now(dt.timezone.utc)
+    today = dt.datetime.now(dt.UTC)
     days = {}
     for year in range(created.year, today.year + 1):  # API allows 1 year per call
         d = gql("""query($l:String!,$f:DateTime!,$t:DateTime!){user(login:$l){
@@ -265,8 +264,8 @@ def panel(x, y, w, h, title, body, delay, accent=GREEN):
 
 def donut(a, rows, cx, cy, r=46, w=18, delay=0.6):
     circ = 2 * 3.14159265 * r
-    parts = [f'<circle cx="{cx}" cy="{cy}" r="{r}" fill="none" stroke="#fff" '
-             f'stroke-opacity=".06" stroke-width="{w}"/>']
+    parts = [(f'<circle cx="{cx}" cy="{cy}" r="{r}" fill="none" stroke="#fff" '
+              f'stroke-opacity=".06" stroke-width="{w}"/>')]
     off = 0.0
     for i, (name, p) in enumerate(rows):
         ln = max(p / 100 * circ - 2, 0.5)
