@@ -27,7 +27,7 @@ import time
 import urllib.error
 import urllib.request
 from collections import Counter
-from xml.sax.saxutils import escape
+from html import escape
 
 USER = os.environ.get("GH_USER", "ExcellenceOseagwina")
 TOKEN = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
