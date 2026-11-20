@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """Validate generated SVG output before it is committed."""
 from __future__ import annotations
 
