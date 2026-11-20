@@ -34,7 +34,8 @@ I enjoy understanding how software works, identifying weaknesses, and improving 
     <td width="50%" valign="top">
       <h3><a href="https://github.com/ExcellenceOseagwina/wellspring-inventory">Wellspring Inventory System</a></h3>
       <p>A web-based inventory management platform for tracking departmental equipment, monitoring equipment condition, managing user access, and handling media uploads.</p>
-      <p><strong>Technologies:</strong> Node.js, Express, JavaScript, Supabase, PostgreSQL.</p>
+      <p><strong>Technologies:</strong> HTML, CSS, JavaScript, Node.js, Express, Supabase Auth, PostgreSQL, Supabase Storage, Multer.</p>
+      <p><strong>Live demo:</strong> <a href="https://wellspring-inventory.vercel.app/">Open application</a> · <a href="https://github.com/ExcellenceOseagwina/wellspring-inventory">Source code</a></p>
       <p>
         <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js" />
         <img src="https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white" alt="Express" />
@@ -46,7 +47,8 @@ I enjoy understanding how software works, identifying weaknesses, and improving 
     <td width="50%" valign="top">
       <h3><a href="https://github.com/ExcellenceOseagwina/WellBot">WellBot</a></h3>
       <p>A student-support chatbot built for Wellspring University. It provides university-related information through a conversational interface, with authentication and conversation-history features.</p>
-      <p><strong>Technologies:</strong> Node.js, Express, JavaScript, Supabase, JWT, and NLP-related tooling.</p>
+      <p><strong>Technologies:</strong> HTML, CSS, JavaScript, Node.js, Express, Supabase, JWT-based authentication, email verification, and a knowledge-base question matcher.</p>
+      <p><strong>Live demo:</strong> <a href="https://wellbot-seven.vercel.app">Open application</a> · <a href="https://github.com/ExcellenceOseagwina/WellBot">Source code</a></p>
       <p>
         <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js" />
         <img src="https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white" alt="Express" />
@@ -60,7 +62,8 @@ I enjoy understanding how software works, identifying weaknesses, and improving 
     <td width="50%" valign="top">
       <h3><a href="https://github.com/ExcellenceOseagwina/smart-farm">SmartFarm</a> <sub>(Fork)</sub></h3>
       <p>A fuzzy-logic-based agricultural monitoring project that evaluates environmental conditions and farm-health indicators to support agricultural decision-making.</p>
-      <p><strong>Technologies:</strong> JavaScript and fuzzy-logic concepts.</p>
+      <p><strong>Technologies:</strong> HTML, CSS, JavaScript, Node.js, Express 5, Supabase Auth, PostgreSQL, and fuzzy logic.</p>
+      <p><strong>Live demo:</strong> <a href="https://smart-farm-six-rho.vercel.app">Open application</a> · <a href="https://github.com/ExcellenceOseagwina/smart-farm">Source code</a></p>
       <p>
         <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" />
       </p>
@@ -68,7 +71,8 @@ I enjoy understanding how software works, identifying weaknesses, and improving 
     <td width="50%" valign="top">
       <h3><a href="https://github.com/ExcellenceOseagwina/CSC-423">CSC-423</a> <sub>(Coursework)</sub></h3>
       <p>Machine-learning coursework exploring supervised and unsupervised learning through practical exercises, including house-price prediction, fraud detection, customer segmentation, clustering, dimensionality reduction, and digit analysis.</p>
-      <p><strong>Technologies:</strong> Python, Jupyter, and scikit-learn.</p>
+      <p><strong>Technologies:</strong> Python, Jupyter, NumPy, pandas, Matplotlib, and scikit-learn.</p>
+      <p><strong>Project materials:</strong> <a href="https://csc-423.vercel.app">Coursework site</a> · <a href="https://github.com/ExcellenceOseagwina/CSC-423">Source code and notebooks</a></p>
       <p>
         <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
         <img src="https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=jupyter&logoColor=white" alt="Jupyter" />
@@ -77,6 +81,11 @@ I enjoy understanding how software works, identifying weaknesses, and improving 
     </td>
   </tr>
 </table>
+
+## 🧭 Project Documentation
+
+- [Project showcase and technical summaries](./docs/project-showcase.md)
+- [System architecture diagrams](./docs/architecture.md)
 
 ## 📊 GitHub Stats
 
