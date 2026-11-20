@@ -4,37 +4,54 @@
 
 </div>
 
-
-<br/>
 <div align="center">
-<a href="https://wakatime.com/@5dd4e18b-a77f-4112-a963-bdce99158e32"><img src="https://wakatime.com/badge/user/5dd4e18b-a77f-4112-a963-bdce99158e32.svg" alt="Total time coded since Sep 20 2026" /></a>
+  <a href="https://wakatime.com/@5dd4e18b-a77f-4112-a963-bdce99158e32">
+    <img src="https://wakatime.com/badge/user/5dd4e18b-a77f-4112-a963-bdce99158e32.svg" alt="Total time coded since September 20, 2026" />
+  </a>
 </div>
-  <br />
 
-![Excellence Oseagwina](./header/about.svg)
+<br />
 
-![Excellence Oseagwina](./skills/skills.svg)
+![About Excellence Oseagwina](./header/about.svg)
+
+## 👋 About Me
+
+I'm a cybersecurity professional and software engineer interested in building useful, secure, and maintainable software. My work and learning interests span application security, ethical hacking, penetration testing, full-stack development, and the systems that support modern applications.
+
+I enjoy understanding how software works, identifying weaknesses, and improving the way applications are designed, built, and deployed.
+
+**Areas of focus**
+- **Cybersecurity:** penetration testing, ethical hacking, application security, and security fundamentals.
+- **Software engineering:** backend and web application development, API integration, and maintainable code.
+- **Infrastructure:** Linux environments, databases, deployment workflows, and development tooling.
+
+![Technical skills and tools](./skills/skills.svg)
 
 ## 🚀 Featured Projects
+
 <table>
   <tr>
     <td width="50%" valign="top">
       <h3><a href="https://github.com/ExcellenceOseagwina/wellspring-inventory">Wellspring Inventory System</a></h3>
-      <p>Web-based platform for digitally managing departmental equipment, featuring user authentication, inventory tracking, equipment condition monitoring and media uploads.</p>
+      <p>A web-based inventory management platform for tracking departmental equipment, monitoring equipment condition, managing user access, and handling media uploads.</p>
+      <p><strong>Technologies:</strong> Node.js, Express, JavaScript, Supabase, PostgreSQL.</p>
       <p>
         <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js" />
         <img src="https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white" alt="Express" />
         <img src="https://img.shields.io/badge/Supabase-3FCF8E?style=flat-square&logo=supabase&logoColor=white" alt="Supabase" />
+        <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL" />
         <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" />
       </p>
     </td>
     <td width="50%" valign="top">
       <h3><a href="https://github.com/ExcellenceOseagwina/WellBot">WellBot</a></h3>
-      <p>Web-based student support chatbot developed for Wellspring University, providing university-related information through an NLP-style conversational interface with user authentication and conversation history.</p>
+      <p>A student-support chatbot built for Wellspring University. It provides university-related information through a conversational interface, with authentication and conversation-history features.</p>
+      <p><strong>Technologies:</strong> Node.js, Express, JavaScript, Supabase, JWT, and NLP-related tooling.</p>
       <p>
         <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js" />
         <img src="https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white" alt="Express" />
         <img src="https://img.shields.io/badge/Supabase-3FCF8E?style=flat-square&logo=supabase&logoColor=white" alt="Supabase" />
+        <img src="https://img.shields.io/badge/JWT-000000?style=flat-square&logo=jsonwebtokens&logoColor=white" alt="JSON Web Tokens" />
         <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" />
       </p>
     </td>
@@ -42,14 +59,16 @@
   <tr>
     <td width="50%" valign="top">
       <h3><a href="https://github.com/ExcellenceOseagwina/smart-farm">SmartFarm</a> <sub>(Fork)</sub></h3>
-      <p>Fuzzy-logic-based agricultural monitoring system that analyzes environmental conditions, evaluates farm health and provides recommendations to support agricultural decision-making.</p>
+      <p>A fuzzy-logic-based agricultural monitoring project that evaluates environmental conditions and farm-health indicators to support agricultural decision-making.</p>
+      <p><strong>Technologies:</strong> JavaScript and fuzzy-logic concepts.</p>
       <p>
         <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" />
       </p>
     </td>
     <td width="50%" valign="top">
       <h3><a href="https://github.com/ExcellenceOseagwina/CSC-423">CSC-423</a> <sub>(Coursework)</sub></h3>
-      <p>Machine learning coursework project exploring supervised and unsupervised learning techniques through practical applications, including house price prediction, fraud detection, customer segmentation, K-Means clustering, Gaussian Mixture Models (GMM), Principal Component Analysis (PCA) and digit analysis.</p>
+      <p>Machine-learning coursework exploring supervised and unsupervised learning through practical exercises, including house-price prediction, fraud detection, customer segmentation, clustering, dimensionality reduction, and digit analysis.</p>
+      <p><strong>Technologies:</strong> Python, Jupyter, and scikit-learn.</p>
       <p>
         <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
         <img src="https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=jupyter&logoColor=white" alt="Jupyter" />
@@ -59,25 +78,18 @@
   </tr>
 </table>
 
-<br />
-
-
 ## 📊 GitHub Stats
-
-<!-- ============================================================
-     GITHUB STATS BLOCK | user: ExcellenceOseagwina
-     Theme: Terminal Green (#00FF41) on GitHub Dark (#0D1117)
-     ============================================================ -->
 
 <div align="center">
 
 ### `$ cat ~/stats.log`
 
-<!-- ROW 1: GitHub Streak -->
-![GitHub stats](./stats.svg)
+![GitHub statistics dashboard](./stats.svg)
 
+</div>
 
 ## 🤝 Connect
+
 <div align="center">
 
 <p>
@@ -93,7 +105,4 @@
 
 ## 🎬 Off the Clock
 
-Anime, manga and comics, video games, and taking apart how things work, fail and improve.
-
-<br />
-
+Anime, manga, comics, video games, and exploring how things work, fail, and improve.
