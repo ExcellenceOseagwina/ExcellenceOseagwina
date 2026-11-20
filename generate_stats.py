@@ -24,6 +24,8 @@ import datetime as dt
 import json
 import os
 import sys
+import time
+import urllib.error
 import urllib.request
 from collections import Counter
 from xml.sax.saxutils import escape
@@ -51,17 +53,40 @@ HEAT = ["#FFFFFF0F", "#065F46", "#00A86B", "#00FF9C", "#C8FFE9"]
 
 
 # ----------------------------------------------------------------- data ----
-def gql(query, variables=None):
-    req = urllib.request.Request(
+def gql(query, variables=None, *, retries=3, timeout=30, opener=None, sleep=time.sleep):
+    """Execute GitHub GraphQL with bounded retries for transient failures."""
+    if not TOKEN:
+        raise RuntimeError("Set GITHUB_TOKEN (or GH_TOKEN), or run with --sample.")
+    request = urllib.request.Request(
         "https://api.github.com/graphql",
         data=json.dumps({"query": query, "variables": variables or {}}).encode(),
-        headers={"Authorization": f"bearer {TOKEN}", "User-Agent": "stats-card"},
+        headers={"Authorization": f"Bearer {TOKEN}", "User-Agent": "stats-card", "Content-Type": "application/json"},
     )
-    with urllib.request.urlopen(req, timeout=30) as r:
-        out = json.load(r)
-    if "errors" in out:
-        raise SystemExit(f"GraphQL error: {out['errors']}")
-    return out["data"]
+    open_request = opener or urllib.request.urlopen
+    retryable_statuses = {429, 500, 502, 503, 504}
+    for attempt in range(retries + 1):
+        try:
+            with open_request(request, timeout=timeout) as response:
+                payload = json.load(response)
+            if not isinstance(payload, dict):
+                raise RuntimeError("GitHub GraphQL returned an invalid response.")
+            if payload.get("errors"):
+                raise RuntimeError(f"GitHub GraphQL error: {payload['errors']}")
+            if not payload.get("data"):
+                raise RuntimeError("GitHub GraphQL response did not contain data.")
+            return payload["data"]
+        except urllib.error.HTTPError as exc:
+            if exc.code not in retryable_statuses or attempt >= retries:
+                detail = exc.read().decode("utf-8", errors="replace")[:500]
+                raise RuntimeError(f"GitHub API HTTP {exc.code}: {detail}") from exc
+            retry_after = exc.headers.get("Retry-After")
+            delay = float(retry_after) if retry_after and retry_after.isdigit() else 2 ** attempt
+        except (urllib.error.URLError, TimeoutError, json.JSONDecodeError) as exc:
+            if attempt >= retries:
+                raise RuntimeError(f"GitHub API request failed after {attempt + 1} attempts: {exc}") from exc
+            delay = 2 ** attempt
+        sleep(min(delay, 30))
+    raise RuntimeError("GitHub API request failed unexpectedly.")
 
 
 def fetch_live():
@@ -130,8 +155,9 @@ def sample_data():
 
 
 # ------------------------------------------------------------- analysis ----
-def streaks(days):
-    today = dt.date.today()
+def streaks(days, today=None):
+    """Return current and longest consecutive contribution-day streaks."""
+    today = today or dt.date.today()
     runs, start, last, run = [], None, None, 0
     for d, c in sorted(days.items()):
         if dt.date.fromisoformat(d) > today:
@@ -162,6 +188,11 @@ def fmt_date(s):
 
 
 def pct_rows(counter, n=5):
+    """Convert counts to percentages, retaining the remainder as Other."""
+    if n < 1:
+        raise ValueError("n must be at least 1")
+    if any(value < 0 for value in counter.values()):
+        raise ValueError("counter values cannot be negative")
     total = sum(counter.values()) or 1
     rows = counter.most_common(n)
     rest = total - sum(v for _, v in rows)
@@ -519,10 +550,26 @@ def render(base, a, sample):
     return "\n".join(s)
 
 
+def main(argv=None):
+    """Generate the statistics SVG. Returns zero on success."""
+    global SAMPLE
+    argv = sys.argv[1:] if argv is None else argv
+    SAMPLE = "--sample" in argv
+    try:
+        data = sample_data() if SAMPLE else fetch_live()
+        analysis = analyse(*data)
+        svg = render(data[0], analysis, SAMPLE)
+        output_path = os.path.abspath(OUT)
+        temp_path = output_path + ".tmp"
+        with open(temp_path, "w", encoding="utf-8") as output:
+            output.write(svg)
+        os.replace(temp_path, output_path)
+        print(f"wrote {OUT} ({len(svg):,} bytes)")
+        return 0
+    except (RuntimeError, OSError, ValueError, KeyError, TypeError) as exc:
+        print(f"stats generation failed: {exc}", file=sys.stderr)
+        return 1
+
+
 if __name__ == "__main__":
-    data = sample_data() if SAMPLE else fetch_live()
-    analysis = analyse(*data)
-    svg = render(data[0], analysis, SAMPLE)
-    with open(OUT, "w", encoding="utf-8") as f:
-        f.write(svg)
-    print(f"wrote {OUT} ({len(svg):,} bytes)")
+    raise SystemExit(main())
