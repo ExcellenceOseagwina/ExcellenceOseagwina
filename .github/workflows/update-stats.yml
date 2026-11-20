@@ -10,7 +10,7 @@ on:
       - "tests/**"
       - "scripts/**"
       - "requirements-dev.txt"
-      - "docs/stats-generator.md"
+      - "docs/**"
       - ".github/workflows/update-stats.yml"
 
 permissions:
