@@ -8,24 +8,42 @@ on:
     paths:
       - "generate_stats.py"
       - "tests/**"
+      - "scripts/**"
       - "docs/stats-generator.md"
       - ".github/workflows/update-stats.yml"
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
-  build:
+  quality:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
         with:
           python-version: "3.12"
+      - name: Install quality tools
+        run: python -m pip install --disable-pip-version-check ruff bandit
       - name: Check Python syntax
-        run: python -m compileall -q generate_stats.py tests
+        run: python -m compileall -q generate_stats.py tests scripts
+      - name: Run Ruff
+        run: ruff check generate_stats.py tests scripts
+      - name: Run Bandit
+        run: bandit -q -r generate_stats.py scripts
       - name: Run unit tests
         run: python -m unittest discover -s tests -v
+
+  generate:
+    needs: quality
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: "3.12"
       - name: Generate card
         env:
           GITHUB_TOKEN: ${{ secrets.STATS_TOKEN || secrets.GITHUB_TOKEN }}
@@ -33,6 +51,8 @@ jobs:
           TZ_OFFSET_HOURS: "1"
           OUT: stats.svg
         run: python generate_stats.py
+      - name: Validate generated SVG
+        run: python scripts/validate_svg.py stats.svg
       - name: Commit if changed
         run: |
           git config user.name "stats-bot"
