@@ -1,0 +1,4 @@
+# Development-only tooling for repository quality and XML safety checks
+ruff
+bandit
+defusedxml
