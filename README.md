@@ -82,10 +82,6 @@ I enjoy understanding how software works, identifying weaknesses, and improving 
   </tr>
 </table>
 
-## 🧭 Project Documentation
-
-- [Project showcase and technical summaries](./docs/project-showcase.md)
-- [System architecture diagrams](./docs/architecture.md)
 
 ## 📊 GitHub Stats
 
