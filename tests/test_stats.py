@@ -2,7 +2,7 @@
 import datetime as dt
 import unittest
 from collections import Counter
-from xml.etree import ElementTree
+from defusedxml import ElementTree
 
 import generate_stats as stats
 
