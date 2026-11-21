@@ -106,7 +106,7 @@ I enjoy understanding how software works, identifying weaknesses, and improving 
       <h3><a href="https://github.com/ExcellenceOseagwina/my_Portfolio">My Portfolio</a></h3>
       <p>A personal portfolio website presenting professional information, skills, and selected projects through a responsive web interface.</p>
       <p><strong>Technologies:</strong> HTML, CSS, JavaScript.</p>
-      <p><strong>Website:</strong> <a href="https://excellenceoseagwina.github.io/my_Portfolio/">Visit portfolio</a> · <a href="https://github.com/ExcellenceOseagwina/my_Portfolio">Source code</a></p>
+      <p><strong>Website:</strong> <a href="https://excellence.oseagwinaexcellence.workers.dev/">Visit portfolio</a> · <a href="https://github.com/ExcellenceOseagwina/my_Portfolio">Source code</a></p>
       <p>
         <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5" />
         <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS3" />
@@ -116,7 +116,9 @@ I enjoy understanding how software works, identifying weaknesses, and improving 
     <td width="50%" valign="top">
       <h3><a href="https://github.com/ExcellenceOseagwina/Naga-Portfolio">Nagasaki Designs — Portfolio</a></h3>
       <p>A personal portfolio project for Nagasaki Designs, showcasing a creative identity, professional profile, skills, and selected work.</p>
-      <p><strong>Source code:</strong> <a href="https://github.com/ExcellenceOseagwina/Naga-Portfolio">View repository</a></p>
+        <p><strong>Technologies:</strong> HTML, CSS, JavaScript.</p>
+      <p><strong>Website:</strong> <a href="https://naga-portfolio-nine.vercel.app/">Visit portfolio</a> · <a href="https://github.com/ExcellenceOseagwina/Naga-Portfolio">Source code</a></p>
+      
     </td>
   </tr>
 </table>
