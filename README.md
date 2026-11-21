@@ -46,8 +46,8 @@ I enjoy understanding how software works, identifying weaknesses, and improving 
     </td>
     <td width="50%" valign="top">
       <h3><a href="https://github.com/ExcellenceOseagwina/WellBot">WellBot</a></h3>
-      <p>A student-support chatbot built for Wellspring University. It provides university-related information through a conversational interface, with authentication and conversation-history features.</p>
-      <p><strong>Technologies:</strong> HTML, CSS, JavaScript, Node.js, Express, Supabase, JWT-based authentication, email verification, and a knowledge-base question matcher.</p>
+      <p>A student-support chatbot for Wellspring University, with student registration and email verification, a knowledge-base question matcher, and conversation-history features.</p>
+      <p><strong>Technologies:</strong> HTML, CSS, JavaScript, Node.js, Express, JWT-based authentication, SMTP email delivery, and Supabase-ready persistence.</p>
       <p><strong>Live demo:</strong> <a href="https://wellbot-seven.vercel.app">Open application</a> · <a href="https://github.com/ExcellenceOseagwina/WellBot">Source code</a></p>
       <p>
         <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js" />
@@ -61,8 +61,8 @@ I enjoy understanding how software works, identifying weaknesses, and improving 
   <tr>
     <td width="50%" valign="top">
       <h3><a href="https://github.com/ExcellenceOseagwina/smart-farm">SmartFarm</a> <sub>(Fork)</sub></h3>
-      <p>A fuzzy-logic-based agricultural monitoring project that evaluates environmental conditions and farm-health indicators to support agricultural decision-making.</p>
-      <p><strong>Technologies:</strong> HTML, CSS, JavaScript, Node.js, Express 5, Supabase Auth, PostgreSQL, and fuzzy logic.</p>
+      <p>A fuzzy-logic-based farm monitoring and decision-support system. Users can record soil moisture, temperature, and humidity readings, receive status assessments and recommendations, and review saved monitoring history.</p>
+      <p><strong>Technologies:</strong> HTML, CSS, vanilla JavaScript, Node.js, Express 5, Supabase Auth, PostgreSQL, and fuzzy logic.</p>
       <p><strong>Live demo:</strong> <a href="https://smart-farm-six-rho.vercel.app">Open application</a> · <a href="https://github.com/ExcellenceOseagwina/smart-farm">Source code</a></p>
       <p>
         <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" />
@@ -70,7 +70,7 @@ I enjoy understanding how software works, identifying weaknesses, and improving 
     </td>
     <td width="50%" valign="top">
       <h3><a href="https://github.com/ExcellenceOseagwina/CSC-423">CSC-423</a> <sub>(Coursework)</sub></h3>
-      <p>Machine-learning coursework exploring supervised and unsupervised learning through practical exercises, including house-price prediction, fraud detection, customer segmentation, clustering, dimensionality reduction, and digit analysis.</p>
+      <p>Machine-learning coursework covering house-price prediction, fraud detection with Gaussian Mixture Models, K-Means clustering, customer segmentation, Principal Component Analysis (PCA), digit analysis, and model evaluation.</p>
       <p><strong>Technologies:</strong> Python, Jupyter, NumPy, pandas, Matplotlib, and scikit-learn.</p>
       <p><strong>Project materials:</strong> <a href="https://csc-423.vercel.app">Coursework site</a> · <a href="https://github.com/ExcellenceOseagwina/CSC-423">Source code and notebooks</a></p>
       <p>
@@ -92,7 +92,7 @@ I enjoy understanding how software works, identifying weaknesses, and improving 
     </td>
     <td width="50%" valign="top">
       <h3><a href="https://github.com/ExcellenceOseagwina/xl-project">XL Project</a></h3>
-      <p>A Python utility for processing Excel workbooks, built to read and manipulate spreadsheet data programmatically.</p>
+      <p>A small Python/openpyxl workbook-processing project that reads transaction data and explores calculating a 10% price adjustment and generating a bar chart.</p>
       <p><strong>Technologies:</strong> Python, openpyxl.</p>
       <p><strong>Source code:</strong> <a href="https://github.com/ExcellenceOseagwina/xl-project">View repository</a></p>
       <p>
@@ -116,7 +116,7 @@ I enjoy understanding how software works, identifying weaknesses, and improving 
     <td width="50%" valign="top">
       <h3><a href="https://github.com/ExcellenceOseagwina/Naga-Portfolio">Nagasaki Designs — Portfolio</a></h3>
       <p>A personal portfolio project for Nagasaki Designs, showcasing a creative identity, professional profile, skills, and selected work.</p>
-        <p><strong>Technologies:</strong> HTML, CSS, JavaScript.</p>
+      <p><strong>Technologies:</strong> HTML, CSS, JavaScript.</p>
       <p><strong>Website:</strong> <a href="https://naga-portfolio-nine.vercel.app/">Visit portfolio</a> · <a href="https://github.com/ExcellenceOseagwina/Naga-Portfolio">Source code</a></p>
       
     </td>
