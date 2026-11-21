@@ -93,6 +93,12 @@ I enjoy understanding how software works, identifying weaknesses, and improving 
 
 </div>
 
+### 📈 Coding Activity
+
+[![WakaTime Stats](https://github-stats-extended.vercel.app/api/wakatime?username=5dd4e18b-a77f-4112-a963-bdce99158e32&layout=compact&langs_count=6&theme=dark_github)](https://wakatime.com/@5dd4e18b-a77f-4112-a963-bdce99158e32)
+
+---
+
 ## 🤝 Connect
 
 <div align="center">
