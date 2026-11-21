@@ -114,11 +114,17 @@ I enjoy understanding how software works, identifying weaknesses, and improving 
       </p>
     </td>
     <td width="50%" valign="top">
-      <h3><a href="https://github.com/ExcellenceOseagwina/Naga-Portfolio">Nagasaki Designs — Portfolio</a></h3>
-      <p>A personal portfolio project for Nagasaki Designs, showcasing a creative identity, professional profile, skills, and selected work.</p>
-      <p><strong>Technologies:</strong> HTML, CSS, JavaScript.</p>
+      <h3><a href="https://github.com/ExcellenceOseagwina/Naga-Portfolio">Nagasaki Designs — Graphic &amp; Product Design Portfolio</a></h3>
+      <p>A portfolio website for a Nigerian graphic and product designer, presenting selected creative work and services including logo design, brand identity, UI/UX design, promotional flyers, product mockups, and illustration.</p>
+      <p><strong>Technologies:</strong> HTML5, CSS3, JavaScript, Font Awesome, and Devicon.</p>
+      <p><strong>Design tools featured:</strong> Adobe Photoshop, Adobe Illustrator, and Figma.</p>
       <p><strong>Website:</strong> <a href="https://naga-portfolio-nine.vercel.app/">Visit portfolio</a> · <a href="https://github.com/ExcellenceOseagwina/Naga-Portfolio">Source code</a></p>
-      
+      <p>
+        <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&amp;logo=html5&amp;logoColor=white" alt="HTML5" />
+        <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&amp;logo=css3&amp;logoColor=white" alt="CSS3" />
+        <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&amp;logo=javascript&amp;logoColor=black" alt="JavaScript" />
+        <img src="https://img.shields.io/badge/Figma-F24E1E?style=flat-square&amp;logo=figma&amp;logoColor=white" alt="Figma" />
+      </p>
     </td>
   </tr>
 </table>
