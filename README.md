@@ -80,6 +80,45 @@ I enjoy understanding how software works, identifying weaknesses, and improving 
       </p>
     </td>
   </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3><a href="https://github.com/ExcellenceOseagwina/python-practice-for-beignners">Python Practice for Beginners</a></h3>
+      <p>A hands-on Python learning repository containing beginner-friendly exercises and console projects covering variables, data types, user input, operators, conditionals, loops, and introductory functions.</p>
+      <p><strong>Technologies:</strong> Python 3 and the Python standard library.</p>
+      <p><strong>Source code:</strong> <a href="https://github.com/ExcellenceOseagwina/python-practice-for-beignners">View repository</a></p>
+      <p>
+        <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
+      </p>
+    </td>
+    <td width="50%" valign="top">
+      <h3><a href="https://github.com/ExcellenceOseagwina/xl-project">XL Project</a></h3>
+      <p>A Python utility for processing Excel workbooks, built to read and manipulate spreadsheet data programmatically.</p>
+      <p><strong>Technologies:</strong> Python, openpyxl.</p>
+      <p><strong>Source code:</strong> <a href="https://github.com/ExcellenceOseagwina/xl-project">View repository</a></p>
+      <p>
+        <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
+        <img src="https://img.shields.io/badge/Excel-217346?style=flat-square&logo=microsoftexcel&logoColor=white" alt="Microsoft Excel" />
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3><a href="https://github.com/ExcellenceOseagwina/my_Portfolio">My Portfolio</a></h3>
+      <p>A personal portfolio website presenting professional information, skills, and selected projects through a responsive web interface.</p>
+      <p><strong>Technologies:</strong> HTML, CSS, JavaScript.</p>
+      <p><strong>Website:</strong> <a href="https://excellenceoseagwina.github.io/my_Portfolio/">Visit portfolio</a> · <a href="https://github.com/ExcellenceOseagwina/my_Portfolio">Source code</a></p>
+      <p>
+        <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5" />
+        <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS3" />
+        <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" />
+      </p>
+    </td>
+    <td width="50%" valign="top">
+      <h3><a href="https://github.com/ExcellenceOseagwina/Naga-Portfolio">Nagasaki Designs — Portfolio</a></h3>
+      <p>A personal portfolio project for Nagasaki Designs, showcasing a creative identity, professional profile, skills, and selected work.</p>
+      <p><strong>Source code:</strong> <a href="https://github.com/ExcellenceOseagwina/Naga-Portfolio">View repository</a></p>
+    </td>
+  </tr>
 </table>
 
 
