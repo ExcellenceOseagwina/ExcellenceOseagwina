@@ -92,6 +92,16 @@ I enjoy understanding how software works, identifying weaknesses, and improving 
       </p>
     </td>
   </tr>
+  < <tr>
+    <td width="50%" valign="top">
+      <h3><a href="https://github.com/ExcellenceOseagwina/python-practice-for-beignners">Python Practice for Beginners</a></h3>
+      <p>A hands-on Python learning repository containing beginner-friendly exercises and console projects covering variables, data types, user input, operators, conditionals, loops, and introductory functions.</p>
+      <p><strong>Technologies:</strong> Python 3 and the Python standard library.</p>
+      <p><strong>Source code:</strong> <a href="https://github.com/ExcellenceOseagwina/python-practice-for-beignners">View repository</a></p>
+      <p>
+        <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
+      </p>
+    </td>
   <tr>
     <td width="50%" valign="top">
       <h3><a href="https://github.com/ExcellenceOseagwina/my_Portfolio">My Portfolio</a></h3>
